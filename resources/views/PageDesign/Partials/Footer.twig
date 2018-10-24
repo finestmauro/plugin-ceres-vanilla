@@ -148,41 +148,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-lg-3 mb-5">
-				<div class="h5">Finest Trachten</div>
-				<ul class="list-unstyled text-sm m-0">
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Impressum" href="{% Link(2) %}">Impressum</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Über Uns" href="{% Link(8) %}">Über Uns</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Hilfe" href="{% Link(402) %}">Hilfe</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Sitemap" href="/sitemap.xml">Sitemap</a></li>
-                	<li class="mb-1"><div id="google_translate_element"></div></li>
-				</ul>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'de', includedLanguages: 'en,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 mb-5">
-				<div class="h5">Service</div>
-				<ul class="list-unstyled text-sm m-0">
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Kontakt" href="{% Link(1) %}">Kontakt</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="AGB" href="{% Link(11) %}">AGB</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Widerrufsrecht" href="{% Link(10) %}">Widerrufsrecht</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Datenschutz" href="{% Link(12) %}">Datenschutz</a></li>
-                	<li class="mb-1"><a class="text-muted text-uppercase" title="Newsletter-Abmeldung" href="/?OrderShow=CancelNewsletter">Newsletter-Abmeldung</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 mb-5">
-				<div class="h5">Bestellen</div>
-				<ul class="list-unstyled text-sm m-0">
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Kundenkonto" href="{% Link_MyAccount() %}">Kundenkonto</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Versand" href="{% Link(403) %}">Versand</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Zahlarten" href="{% Link(38) %}">Zahlarten</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Retouren" href="{% Link(407) %}">Retouren</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 mb-5">
 				<div class="h5">Finest Apps</div>
 				<a class="d-block w-50 mr-auto mb-2" title="Lade die Finest Trachten iOS App bei iTunes" href="https://itunes.apple.com/de/app/finest-trachten/id710530200?mt=8" target="_blank">
 					<img src="https://www.finest-trachten.info/images/itunes.jpg" alt="Lade die Finest Trachten iOS App bei iTunes" class="w-100">
@@ -190,17 +155,6 @@ function googleTranslateElementInit() {
 				<a class="d-block w-50 mr-auto mb-2" title="Lade die Finest Trachten Android App bei Google Play" href="https://play.google.com/store/apps/details?id=com.shopgate.android.app11080" target="_blank">
 					<img src="https://www.finest-trachten.info/images/playstore.jpg" alt="Lade die Finest Trachten Android App bei Google Play" class="w-100">
 				</a>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-4 mb-5">
-				<div class="h5">Auf einen Blick</div>
-				<ul class="list-unstyled text-sm m-0">
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="alle Trachtenhersteller" href="{% Link(49) %}">Hersteller</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Größentabelle" href="{% Link(406) %}">Größentabelle</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Trachtenlexikon" href="{% Link(81) %}">Trachtenlexikon</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Unser Trachten-Outfit Planner für Ihr Traum-Outfit" href="/trachten-outfits">Trachten-Outfits</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Trachtenblog" href="/blog/">Trachtenblog</a></li>
-                    <li class="mb-1"><a class="text-muted text-uppercase" title="Artikelgalerie" href="https://gallery.finest-trachten.de">Artikelgalerie</a></li>
-				</ul>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-4 mb-5">
 				<div class="h5">Schnell gefunden für Damen</div>
@@ -243,18 +197,6 @@ function googleTranslateElementInit() {
 				</ul>
 			</div>
 		</div>
-		{% if $IsWelcomePage %}
-        <div class="row">
-			<div class="col mb-5 text-sm text-justify">
-				{% Container_NavigationCategories5() %}
-        	</div>
-        </div>
-		{% endif %}
-        <div class="row">
-			<div class="col mb-5">
-				{% Container_NavigationCategories2() %}
-        	</div>
-        </div>
 	</div>
 </footer>
 
