@@ -3,3 +3,7 @@
 body {
     background-color: #fff;
 }
+
+body > #vue-app, body > #vue-error {
+    background-color: #fff;
+}
