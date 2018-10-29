@@ -4,7 +4,7 @@ body {
     background-color: #fff;
 }
 
-body > #vue-app, body > #vue-error {
+body > #vue-app, body > #vue-error, .navbar {
     background-color: #fff;
 }
 
