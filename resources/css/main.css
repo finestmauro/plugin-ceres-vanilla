@@ -47,3 +47,24 @@ body > #vue-app, body > #vue-error {
 .text-large {
     font-size: 120%;
 }
+
+@media (min-width: 992px) {
+    .brand-wrapper {
+        display: block;
+        margin: 1rem 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+        width: 25%;
+    }
+
+    .navbar-brand img {
+        max-height: auto;
+    }
+}
