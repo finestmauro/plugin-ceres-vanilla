@@ -51,10 +51,12 @@ body > #vue-app, body > #vue-error {
 @media (min-width: 992px) {
     .brand-wrapper {
         display: block;
-        margin: 1rem 0;
-        padding: 0;
+        margin: 0;
+        padding: 1rem 0 .5rem;
         position: relative;
         text-align: center;
+        -webkit-transform: none;
+        transform: none;
         width: 100%;
     }
 
@@ -65,6 +67,6 @@ body > #vue-app, body > #vue-error {
     }
 
     .navbar-brand img {
-        max-height: auto;
+        max-height: 100%;
     }
 }
