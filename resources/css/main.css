@@ -1,10 +1,6 @@
 /* Enter your CSS here */
 
-body {
-    background-color: #fff;
-}
-
-body > #vue-app, body > #vue-error, .navbar {
+body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     background-color: #fff;
 }
 
@@ -73,6 +69,16 @@ body > #vue-app, body > #vue-error, .navbar {
 
     #mainNavbarCollapsable ul.mainmenu > li > a {
         padding: 1.3rem 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    #mainNavbarCollapsable ul.mainmenu li a,
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li a {
+        color: #999;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li.level1 > a {
+        color: #666;
     }
 
     #mainNavbarCollapsable ul.mainmenu > li.ddown > a:after {
