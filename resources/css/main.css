@@ -49,6 +49,7 @@ body > #vue-app, body > #vue-error, .navbar {
 }
 
 @media (min-width: 992px) {
+
     .brand-wrapper {
         display: block;
         margin: 0;
@@ -68,5 +69,21 @@ body > #vue-app, body > #vue-error, .navbar {
 
     .navbar-brand img {
         max-height: 100%;
+    }
+
+    #mainNavbarCollapsable ul.mainmenu > li > a {
+        padding: 1.3rem 1.3rem;
+    }
+
+    #mainNavbarCollapsable ul.mainmenu > li.ddown > a:after {
+        display: none;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu {
+        justify-content: center;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
+        border: 1px solid #efefef;
     }
 }
