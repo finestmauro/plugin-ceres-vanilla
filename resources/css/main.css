@@ -72,7 +72,8 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
         letter-spacing: 2px;
     }
 
-    #mainNavbarCollapsable ul.mainmenu > li:hover {
+    .no-touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li:hover,
+    .touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li.hover {
         background: #efefef;
     }
 
