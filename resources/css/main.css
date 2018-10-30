@@ -74,7 +74,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .brand-wrapper {
         display: block;
         margin: 0;
-        padding: 1rem 0 .5rem;
+        padding: 1rem 0 0;
         position: relative;
         text-align: center;
         -webkit-transform: none;
@@ -100,6 +100,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .no-touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li:hover,
     .touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li.hover {
         background: #efefef;
+        background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#efefef 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 );
     }
 
     #mainNavbarCollapsable ul.mainmenu li a,
