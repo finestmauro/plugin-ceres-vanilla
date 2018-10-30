@@ -48,6 +48,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     font-size: 120%;
 }
 
+.text-double {
+    font-size: 200%;
+}
+
 .b-t-d-1 {
     border-top: 1px dotted #4d4f4d;
 }
