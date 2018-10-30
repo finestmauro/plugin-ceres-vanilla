@@ -8,18 +8,17 @@
         <div class="row">
             <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
                 <a class="navbar-brand" href="{{ homepageURL }}">
-                    {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
-                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                    {% else %}
-                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                    {% endif %}
+                    <img alt="Finest Trachten" src="https://www.finest-trachten.info/images/ftlogotext.svg">
                 </a>
 
+                {% if not services.template.isCheckout() %}
                 <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler hidden-lg-up" type="button">
                     &#9776;
                 </button>
+                {% endif %}
             </div>
 
+            {% if not services.template.isCheckout() %}
             <div id="mainNavbarCollapsable">
                 <ul class="breadcrumb">
                     <li class="btnClose"></li>
@@ -29,7 +28,7 @@
                     {% include "CeresVanilla::PageDesign.Partials.Header.NavigationList" %}
                 {% endif %}
             </div>
-
+            {% endif %}
         </div>
     </div>
 </nav>
