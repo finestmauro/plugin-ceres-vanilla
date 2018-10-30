@@ -69,6 +69,117 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     float: none;
 }
 
+.box{
+	position: relative;
+	width: 100%;
+}
+
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.content .link1 {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 50%;
+	width: 50%;
+}
+
+.content .link2 {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+}
+
+.content .h2 {
+    bottom: 50%;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    left: 5%;
+    line-height: 30px;
+    margin: 0 0 -40px 0;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px #000;
+    width: 90%;
+}
+
+.content blockquote {
+    bottom: 50%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    height: 70px;
+    left: 0;
+    line-height: 20px;
+    margin-bottom: -120px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 2px 3px #000;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 2;
+}
+
+.content blockquote p {
+    background: rgba(0,0,0,0.25);
+    border: 4px solid #fff;
+    line-height: 40px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+.bg-img-1 {
+    background-image: url(/layout/2018/images/24-8-krueger-dirndl-1080-1080.jpg);
+}
+.bg-img-3 {
+    background-image: url(/layout/2018/images/marjo-trachten-1080-1080-1.jpg);
+}
+.bg-img-2 {
+    background-image: url(/layout/2018/images/lederhosen-1080-1080-1.jpg);
+}
+.bg-img-4 {
+    background-image: url(/layout/2018/images/sale-sommer-1080-1080.jpg);
+}
+
+@media (min-width: 768px) {
+
+	.content .h2 {
+	    font-size: 42px;
+    	letter-spacing: 8px;
+	    line-height: 50px;
+	    margin: 0 0 -120px 0;
+	}
+
+	.content blockquote {
+	    margin: 0 0 -200px 0;
+	}
+}
+
 @media (min-width: 992px) {
 
     .brand-wrapper {
