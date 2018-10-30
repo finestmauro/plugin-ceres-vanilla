@@ -74,7 +74,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .brand-wrapper {
         display: block;
         margin: 0;
-        padding: 1rem 0 0;
+        padding: 1rem 0 0.5rem;
         position: relative;
         text-align: center;
         -webkit-transform: none;
@@ -90,6 +90,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
     .navbar-brand img {
         max-height: 100%;
+        max-width: 100%;
     }
 
     #mainNavbarCollapsable ul.mainmenu > li > a {
