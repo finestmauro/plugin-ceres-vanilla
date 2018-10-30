@@ -232,6 +232,7 @@
                     for( var i = 0; i < children.length; i++ )
                     {
                         console.log(children[i]);
+                        console.log(children[i].getBoundingClientRect().height);
 
                         bodyOffset += children[i].getBoundingClientRect().height;
                     }
