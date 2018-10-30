@@ -44,6 +44,19 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     font-size: 120%;
 }
 
+.b-t-d-1 {
+    border-top: 1px dotted #4d4f4d;
+}
+
+.b-b-d-1 {
+    border-bottom: 1px dotted #4d4f4d;
+}
+
+.b-y-d-1 {
+    border-top: 1px dotted #4d4f4d;
+    border-bottom: 1px dotted #4d4f4d;
+}
+
 @media (min-width: 992px) {
 
     .brand-wrapper {
