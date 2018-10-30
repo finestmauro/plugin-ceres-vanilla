@@ -57,6 +57,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     border-bottom: 1px dotted #4d4f4d;
 }
 
+.btn > .fa {
+    float: none;
+}
+
 @media (min-width: 992px) {
 
     .brand-wrapper {
