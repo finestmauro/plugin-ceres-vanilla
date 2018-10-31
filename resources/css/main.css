@@ -1,6 +1,6 @@
 /* Enter your CSS here */
 
-body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
+body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     background-color: #fff;
 }
 
@@ -158,9 +158,9 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -webkit-box-sizing: main-teaser-box;
-    -moz-box-sizing: main-teaser-box;
-    box-sizing: main-teaser-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     height: 100%;
     position: absolute;
     top: 0;
@@ -189,13 +189,13 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
     font-size: 1rem;
     left: 0;
     line-height: 2rem;
-    margin: 0 5%;
+    margin: 0 10%;
     padding: 0.5rem 0;
     position: absolute;
     text-align: center;
     text-shadow: 1px 2px 3px #000;
     text-transform: uppercase;
-    width: 90%;
+    width: 80%;
 }
 
 .suggestions {
@@ -271,7 +271,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu {
-        justify-main-teaser: center;
+        justify-content: center;
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
