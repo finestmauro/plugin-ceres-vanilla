@@ -153,6 +153,21 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     position: relative;
 }
 
+.bg-img {
+    background-position: center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .bg-img-1 {
     background-image: url(https://www.finest-trachten.info/images/teaser/krueger-dirndl-1080-1080.jpg);
 }
