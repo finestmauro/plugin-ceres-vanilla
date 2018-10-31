@@ -74,10 +74,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
 	width: 100%;
 }
 
-.box:before{
-	main-teaser: "";
-	display: block;
-	padding-top: 100%;
+.box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
 .main-teaser {
