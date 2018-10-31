@@ -100,10 +100,6 @@
 	</div>
 
     <div class="row mb-5">
-	{% set today = date("Y-m-d") %}
-	{% set daynumber = date('N', strtotime(today)) %}
-
-		{% if daynumber == 1 %}
 		<div class="col-md-4 m-b-2">
 			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=30&attrib%5Bvendor%5D%5B0%5D=Krüger&attrib%5Bvendor%5D%5B1%5D=Krüger+Dirndl&first=0">
 		        <img src="/layout/2018/images/er-krueger.jpg" class="w-100">
@@ -116,85 +112,6 @@
 		        <div class="h3">Zum Gweih & Silk Herren Shop</div>
 		    </a>
 		</div>
-		{% elseif daynumber == 2 %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=MarJo+Trachten&first=0">
-		        <img src="/layout/2018/images/er-marjo-trachten.jpg" class="w-100">
-		        <div class="h3">Zum Marjo Trachten Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Salewa&first=0">
-		        <img src="/layout/2018/images/er-salewa.jpg" class="w-100">
-		        <div class="h3">Zum Salewa Herren Shop</div>
-		    </a>
-		</div>
-		{% elseif daynumber == 3 %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Country+Line&first=0">
-		        <img src="/layout/2018/images/er-country-line.jpg" class="w-100">
-		        <div class="h3">Zum Country Line Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Hammerschmid&first=0">
-		        <img src="/layout/2018/images/er-hammerschmid.jpg" class="w-100">
-		        <div class="h3">Zum Hammerschmid Herren Shop</div>
-		    </a>
-		</div>
-		{% elseif daynumber == 4 %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Almsach&first=0">
-		        <img src="/layout/2018/images/er-almsach.jpg" class="w-100">
-		        <div class="h3">Zum Almsach Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Hammerschmid&first=0">
-		        <img src="/layout/2018/images/er-hammerschmid.jpg" class="w-100">
-		        <div class="h3">Zum Hammerschmid Herren Shop</div>
-		    </a>
-		</div>
-		{% elseif daynumber == 5 %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=30&attrib%5Bvendor%5D%5B0%5D=Krüger&attrib%5Bvendor%5D%5B1%5D=Krüger+Dirndl&first=0">
-		        <img src="/layout/2018/images/er-krueger.jpg" class="w-100">
-		        <div class="h3">Zum Krüger Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Gweih+%26+Silk&first=0">
-		        <img src="/layout/2018/images/er-gweih-und-silk.jpg" class="w-100">
-		        <div class="h3">Zum Gweih & Silk Herren Shop</div>
-		    </a>
-		</div>
-		{% elseif daynumber == 6 %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=MarJo+Trachten&first=0">
-		        <img src="/layout/2018/images/er-marjo-trachten.jpg" class="w-100">
-		        <div class="h3">Zum Marjo Trachten Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Salewa&first=0">
-		        <img src="/layout/2018/images/er-salewa.jpg" class="w-100">
-		        <div class="h3">Zum Salewa Herren Shop</div>
-		    </a>
-		</div>
-		{% else %}
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Country+Line&first=0">
-		        <img src="/layout/2018/images/er-country-line.jpg" class="w-100">
-		        <div class="h3">Zum Country Line Herren Shop</div>
-		    </a>
-		</div>
-		<div class="col-md-4 m-b-2">
-			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=0&attrib%5Bvendor%5D%5B0%5D=Hammerschmid&first=0">
-		        <img src="/layout/2018/images/er-hammerschmid.jpg" class="w-100">
-		        <div class="h3">Zum Hammerschmid Herren Shop</div>
-		    </a>
-		</div>
-		{% endif %}
         <div class="col-md-4 m-b-2">
 			<ul class="suggestions">
 				<li class="w-100 h4"><a href="/herren/lederhosen/" title="Lederhosen">Lederhosen</a></li>
