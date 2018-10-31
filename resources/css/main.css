@@ -154,16 +154,16 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 .bg-img-1 {
-    background-image: url(/layout/2018/images/24-8-krueger-dirndl-1080-1080.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/krueger-dirndl-1080-1080.jpg);
 }
 .bg-img-3 {
-    background-image: url(/layout/2018/images/marjo-trachten-1080-1080-1.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/marjo-trachten-1080-1080-1.jpg);
 }
 .bg-img-2 {
-    background-image: url(/layout/2018/images/lederhosen-1080-1080-1.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/lederhosen-1080-1080-1.jpg);
 }
 .bg-img-4 {
-    background-image: url(/layout/2018/images/sale-sommer-1080-1080.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/sale-1080-1080.jpg);
 }
 
 .start-teaser .h3, .teaser .h3 {
@@ -201,9 +201,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
     .brand-wrapper {
         display: block;
+        height: 80px;
         margin: 0;
         padding: 1rem 0 0.5rem;
-        position: relative;
+        position: static;
         text-align: center;
         -webkit-transform: none;
         transform: none;
@@ -213,7 +214,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .navbar-brand {
         margin: 0;
         padding: 0;
-        width: 25%;
+        width: 296px;
     }
 
     .navbar-brand img {
