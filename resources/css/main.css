@@ -198,6 +198,12 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-main-teaser {
     width: 90%;
 }
 
+.suggestions {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
 @media (min-width: 768px) {
 
 	.main-teaser .h2 {
