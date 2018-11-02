@@ -204,6 +204,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     padding: 0;
 }
 
+.owl-prev {
+    left: 0;
+}
+
 @media (min-width: 768px) {
 
 	.main-teaser .h2 {
