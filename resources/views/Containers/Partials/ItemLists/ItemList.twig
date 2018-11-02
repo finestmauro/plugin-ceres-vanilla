@@ -1,0 +1,25 @@
+{{ component( "Ceres::Containers.Components.ContainerItemList" ) }}
+{{ component( "Ceres::Containers.Components.LastSeenItemList" ) }}
+
+{% set listType = config("Ceres.item.lists." ~ itemListNo ~ ".list_type") %}
+{% set tagIds = config("Ceres.item.lists." ~ itemListNo ~ ".tag_ids") | split(",") %}
+{% set tagSorting = config("Ceres.item.lists.tag_sorting") %}
+{% set isHome = services.template.isHome() %}
+
+{% if listType == "cross_selling" %}
+    {% set itemList = item.CrossSellingItems.documents %}
+{% elseif listType == "tag_list" %}
+    {% set itemList = services.itemList.getItemList( listType, tagIds ).documents %}
+{% endif %}
+
+<div class="row">
+    {% if listType == "last_seen" %}
+        <last-seen-item-list>
+            <div>
+                {% include 'Ceres::Containers.Partials.ItemLists.ItemListHeader' with { itemListNo: itemListNo, listType: listType, isHome: isHome } %}
+            </div>
+        </last-seen-item-list>
+    {% elseif itemList is not empty %}
+        <container-item-list :items="{{ itemList | json_encode }}"></container-item-list>
+    {% endif %}
+</div>
