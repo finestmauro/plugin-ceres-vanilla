@@ -1,25 +1,8 @@
-{% extends 'Ceres::Homepage.Homepage' %}
-
-{% set homepageNewTitleDE = 'NEU' %}
-{% set homepageNewTitleEN = 'NEW' %}
-{% set homepageNewId = 481 %}
-
-{% set homepageTopsellerTitleDE = 'TOP' %}
-{% set homepageTopsellerTitleEN = 'TOP' %}
-{% set homepageTopsellerId = 533 %}
+{% extends getPartial('page-design') %}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
-{% set paginatedResultNew      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageNewId, 'page':1, 'items':6, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
-{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageTopsellerId, 'page':1, 'items':6, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
-
-{% set itemListNew             = paginatedResultNew.documents %}
-{% set itemListTop             = paginatedResultTop.documents %}
-
 {% block PageBody %}
-
-{{ component( "Ceres::ItemList.Components.ItemList") }}
-{{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 
 <div class="row m-b-3 m-x-5">
 	<div class="col-12 col-lg-6 p-t-1 p-x-5">
@@ -143,48 +126,6 @@
 	</div>
 </div>
 
-<div class="m-b-2">
-    <h4 class="section-header">
-        {% if lang == "de" %}
-            {{ homepageNewTitleDE }}
-        {% elseif lang == "en" %}
-            {{ homepageNewTitleEN }}
-        {% endif %}
-    </h4>
-    <!-- crosssell start -->
-    <div class="row">
-        <div class="col-xs-12">
-            <ul class="product-list row grid">
-                {% for item in itemListNew %}
-                    <li class="col-xs-12 col-sm-4 col-md-2">
-                        {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="m-b-2">
-    <h4 class="section-header">
-        {% if lang == "de" %}
-            {{ homepageTopsellerTitleDE }}
-        {% elseif lang == "en" %}
-            {{ homepageTopsellerTitleEN }}
-        {% endif %}
-    </h4>
-    <!-- crosssell start -->
-    <div class="row">
-        <div class="col-xs-12">
-           <ul class="product-list row grid">
-                {% for item in itemListTop %}
-                    <li class="col-xs-12 col-sm-4 col-md-2">
-                        {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
+{{ LayoutContainer.show("Ceres::Homepage.Container1") }}
 
 {% endblock %}
