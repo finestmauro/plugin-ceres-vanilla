@@ -27,6 +27,14 @@
             </div>
         {% endif %}
 
+        {% if ceresConfig.item.showCategoryDescription %}
+        <div class="m-b-2 row">
+            <div class="col-xs-12">
+                <div id="category-description2-container" class="category-description m-b-1">{{ category.details[0].description2 | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+
         <div class="list-controls m-b-2">
             <div class="list-controls-inner">
                 <div class="row">
