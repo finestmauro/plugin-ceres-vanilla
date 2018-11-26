@@ -208,6 +208,11 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     left: 0;
 }
 
+.category-description {
+    padding: 15px;
+    border: 1px solid #efefef;
+}
+
 @media (min-width: 768px) {
 
 	.main-teaser .h2 {
