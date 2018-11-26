@@ -65,6 +65,8 @@
 	</div>
 </div>
 
+{{ "now"|date('N') }}
+
 <div class="container-max">
 	<div class="row text-center m-b-1">
         <div class="col-xs-12">
@@ -82,18 +84,22 @@
                 <li class="w-100 h4 m-b-2"><a href="/schuhe/damenschuhe/" title="Schuhe">Schuhe</a></li>
             </ul>
         </div>
+		{% if "now"|date('N') == 1 %}
         <div class="col-md-4 m-b-2 teaser">
             <a href="/damen/?multishop_id=0&amp;group%5B0%5D=1&amp;service=selector&amp;Params%5BSearchParam%5D=&amp;count=0&amp;attrib%5Bvendor%5D%5B0%5D=Krüger+Dirndl&amp;first=0">
                 <img class="w-100" src="https://www.finest-trachten.info/images/teaser/sie-krueger-dirndl.jpg">
                 <div class="h3">Zum Krüger Dirndl Damen Shop</div>
             </a>
         </div>
+		{% endif %}
+		{% if "now"|date('N') == 2 %}
         <div class="col-md-4 m-b-2 teaser">
             <a href="/damen/?multishop_id=0&amp;group%5B0%5D=1&amp;service=selector&amp;Params%5BSearchParam%5D=&amp;count=0&amp;attrib%5Bvendor%5D%5B0%5D=Almsach&amp;first=0">
                 <img class="w-100" src="https://www.finest-trachten.info/images/teaser/sie-almsach.jpg">
                 <div class="h3">Zum Almsach Damen Shop</div>
             </a>
         </div>
+		{% endif %}
     </div>
 	<div class="row text-center m-b-1">
         <div class="col-xs-12">
