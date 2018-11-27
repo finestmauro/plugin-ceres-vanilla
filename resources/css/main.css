@@ -208,11 +208,11 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     left: 0;
 }
 
-.owl-carousel .owl-stage-outer {
+.owl-thumbs .owl-stage-outer {
     height: auto !important;
 }
 
-.owl-carousel .owl-stage {
+.owl-thumbs .owl-stage {
     width: 100% !important;
 }
 
