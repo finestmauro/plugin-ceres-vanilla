@@ -8,16 +8,12 @@
     <div>
         <div class="single container-max page-content">
             <div class="row m-t-3">
-                <div class="col-md-6 single-leftside">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <slot name="ImageCarousel"></slot>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- IMAGE CAROUSEL -->
+                <slot name="ImageCarousel"></slot>
 
                 <!-- ITEM DETAIL -->
-                <div class="col-md-6 single-rightside m-t-1" v-stick-in-parent>
+                <div class="col-md-5 single-rightside m-t-1" v-stick-in-parent>
                     <div class="producertag h6 producer text-muted" v-if="currentVariation.filter.hasManufacturer">
                         ${ currentVariation.item.manufacturer.externalName }
                     </div>

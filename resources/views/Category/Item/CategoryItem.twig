@@ -27,13 +27,16 @@
         </div>
         {% endif %}
 
-        {% if ceresConfig.item.showCategoryDescription %}
-        <div class="row m-b-2">
-            <div class="col-xs-12">
-                {{ category.details[0].description2 | raw }}
+        <div class="list-controls m-b-2">
+            <div class="list-controls-inner">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p>Sie benötigen Hilfe?</p>
+                        <p>Unter "<a href="#category-description-container">Ratgeber für {{ category.details[0].name }}</a>" finden Sie wertvolle Tipps.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        {% endif %}
 
         <div class="list-controls m-b-2">
             <div class="list-controls-inner">
@@ -121,7 +124,8 @@
         {% if ceresConfig.item.showCategoryDescription %}
         <div class="m-b-2 row">
             <div class="col-xs-12">
-                <div id="category-description-container" class="category-description m-b-1">{{ category.details[0].description | raw }}</div>
+                <div id="category-description-container" class="category-description m-b-1">{{ category.details[0].description2 | raw }}</div>
+                <div class="category-description m-b-1">{{ category.details[0].description | raw }}</div>
             </div>
         </div>
         {% endif %}
