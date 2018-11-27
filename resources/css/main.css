@@ -208,6 +208,21 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     left: 0;
 }
 
+.owl-carousel .owl-stage-outer {
+    height: auto !important;
+}
+
+.owl-carousel .owl-item {
+    width: 100% !important;
+    margin: 0 0 10px !important;
+}
+
+.owl-thumbs .owl-thumb {
+    height: auto;
+    margin: 0;
+    padding: 5px;
+}
+
 .category-description {
     padding: 15px;
     border: 1px solid #efefef;
