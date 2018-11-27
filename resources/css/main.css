@@ -212,7 +212,11 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     height: auto !important;
 }
 
-.owl-carousel .owl-item {
+.owl-carousel .owl-stage {
+    width: 100% !important;
+}
+
+.owl-thumbs .owl-item {
     width: 100% !important;
     margin: 0 0 10px !important;
 }
