@@ -208,25 +208,6 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     left: 0;
 }
 
-.owl-thumbs .owl-stage-outer {
-    height: auto !important;
-}
-
-.owl-thumbs .owl-stage {
-    width: 100% !important;
-}
-
-.owl-thumbs .owl-item {
-    width: 100% !important;
-    margin: 0 0 10px !important;
-}
-
-.owl-thumbs .owl-thumb {
-    height: auto;
-    margin: 0;
-    padding: 5px;
-}
-
 .category-description {
     padding: 15px;
     border: 1px solid #efefef;
@@ -244,6 +225,25 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 	.main-teaser .h3 {
 	    margin: 0 0 -200px 0;
 	}
+
+    .owl-thumbs .owl-stage-outer {
+        height: auto !important;
+    }
+
+    .owl-thumbs .owl-stage {
+        width: 100% !important;
+    }
+
+    .owl-thumbs .owl-item {
+        width: 100% !important;
+        margin: 0 0 10px !important;
+    }
+
+    .owl-thumbs .owl-thumb {
+        height: auto;
+        margin: 0;
+        padding: 5px;
+    }
 }
 
 @media (min-width: 992px) {
