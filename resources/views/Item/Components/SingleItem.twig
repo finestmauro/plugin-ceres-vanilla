@@ -268,21 +268,33 @@
             </div>
             <!-- ./ITEM DESCRIPTION -->
 
+            <div id="shipinfo" class="bg-info m-b-2">
+            	<div class="container-max">
+            		<div class="row text-center">
+            			<div class="col-xs-12">
+                            <div class="h3 text-uppercase text-center p-y-2 m-y-0">
+            					<i class="fa fa-truck m-r-1 text-large"></i>
+            					<strong class="text-primary">90%</strong> aller Bestellungen werden innerhalb von <strong class="text-primary">24 bis 48 Stunden</strong> zugestellt!
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+
+        	<div class="row text-center m-b-1">
+                <div class="col-xs-12">
+                    <div class="h3 p-t-1"><span class="text-double alex">Das passende Outfit shoppen</span></div>
+                </div>
+        	</div>
+
+        	<div class="row text-center m-b-1">
+                <div class="col-xs-12">
+        			{% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 2 } %}
+                </div>
+        	</div>
+
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
         </div>
     </div>
 </script>
-
-<div id="shipinfo" class="bg-info m-b-2">
-	<div class="container-max">
-		<div class="row text-center">
-			<div class="col-xs-12">
-                <div class="h3 text-uppercase text-center p-y-2 m-y-0">
-					<i class="fa fa-truck m-r-1 text-large"></i>
-					<strong class="text-primary">90%</strong> aller Bestellungen werden innerhalb von <strong class="text-primary">24 bis 48 Stunden</strong> zugestellt!
-				</div>
-			</div>
-		</div>
-	</div>
-</div>

@@ -1,6 +1,19 @@
 <script type="x/template" id="vue-item-image-carousel">
     <div itemscope itemtype="http://schema.org/Thing">
-        <div class="col-md-1">
+        <div class="col-md-6 push-md-1">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="single-carousel" class="owl-carousel owl-theme owl-single-item" ref="single">
+                        <div v-for="image in singleImages">
+                            <a :href="image.url" data-lightbox="single-big-image-gallery">
+                                <img class="owl-lazy" :data-src="image.url" :alt="getAltText(image)" :title="getItemName()" itemprop="image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 pull-md-6">
             <div class="row">
                 <div class="col-xs-12">
                     <div id="thumb-carousel" class="owl-thumbs owl-carousel owl-theme owl-single-item m-t-1" ref="thumbs">
@@ -13,19 +26,6 @@
                             :title="getItemName()"
                             v-for="(imagePreview, index) in carouselImages"
                         >
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="single-carousel" class="owl-carousel owl-theme owl-single-item" ref="single">
-                        <div v-for="image in singleImages">
-                            <a :href="image.url" data-lightbox="single-big-image-gallery">
-                                <img class="owl-lazy" :data-src="image.url" :alt="getAltText(image)" :title="getItemName()" itemprop="image">
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
