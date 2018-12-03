@@ -2,7 +2,7 @@
 
 {% block PageBody %}
 
-    {{ component( "Ceres::ItemList.Components.ItemList" ) }}
+    {{ component( "CeresVanilla::ItemList.Components.ItemList" ) }}
     {{ component( "Ceres::ItemList.Components.ItemListSorting" ) }}
     {{ component( "Ceres::ItemList.Components.ItemsPerPage" ) }}
     {{ component( "Ceres::ItemList.Components.Pagination" ) }}
@@ -10,13 +10,13 @@
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterTagList") }}
 
     <div class="categoriegrid page-content container-max">
-        <div class="row m-t-1">
+        <div class="row m-y-2">
             <div class="col-xs-12">
                 <h1 class="h2" id="searchPageTitle">{{ trans("Ceres::Template.itemSearchResults") }} {{ searchString }}</h1>
             </div>
         </div>
 
-        <div class="list-controls m-b-3">
+        <div class="list-controls m-b-2">
             <div class="list-controls-inner">
                 <div class="row">
                     <div class="col-xs-12">
