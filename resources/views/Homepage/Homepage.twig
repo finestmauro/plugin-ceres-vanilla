@@ -52,7 +52,7 @@
 	</div>
 </div>
 
-<div id="shipinfo" class="bg-info m-b-2">
+<div id="shipinfo" class="bg-info m-b-3">
 	<div class="container-max">
 		<div class="row text-center">
 			<div class="col-xs-12">
@@ -68,10 +68,11 @@
 <div class="container-max">
 	<div class="row text-center m-b-1">
         <div class="col-xs-12">
-            <div class="h3 p-t-1"><span class="text-double alex">Traumhafte Outfits für Sie</span></div>
+            <div class="h4 p-t-1"><span class="text-double alex">Traumhafte Outfits für Sie</span></div>
         </div>
 	</div>
-    <div class="row text-center text-uppercase m-b-2">
+
+    <div class="row text-center text-uppercase m-b-3">
         <div class="col-md-4 m-b-2">
             <ul class="suggestions">
                 <li class="w-100 h4 m-b-2"><a href="/damen/dirndl/" title="Dirndl">Dirndl</a></li>
@@ -175,12 +176,14 @@
 		</div>
 		{% endif %}
     </div>
+
 	<div class="row text-center m-b-1">
         <div class="col-xs-12">
-            <div class="h3 p-t-1"><span class="text-double alex">Fesche Outfits für Ihn</span></div>
+            <div class="h4 p-t-1"><span class="text-double alex">Fesche Outfits für Ihn</span></div>
         </div>
 	</div>
-    <div class="row text-center text-uppercase m-b-1">
+
+    <div class="row text-center text-uppercase m-b-3">
 		{% if "now"|date('N') == 1 %}
 		<div class="col-md-4 m-b-2 teaser">
 			<a href="/herren/?multishop_id=0&group%5B0%5D=1&service=selector&Params%5BSearchParam%5D=&count=30&attrib%5Bvendor%5D%5B0%5D=Krüger&attrib%5Bvendor%5D%5B1%5D=Krüger+Dirndl&first=0">
@@ -285,13 +288,14 @@
         </div>
 	</div>
 </div>
+
 <div class="container-max">
 	<div class="row text-center m-b-1">
         <div class="col-xs-12">
-            <div class="h3 p-t-1"><span class="text-double alex">Die neuesten Produkte</span></div>
+            <div class="h4 p-t-1"><span class="text-double alex">Die neuesten Produkte</span></div>
         </div>
 	</div>
-	<div class="row text-center m-b-1">
+	<div class="row text-center m-b-3">
         <div class="col-xs-12">
 			{% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 3 } %}
         </div>

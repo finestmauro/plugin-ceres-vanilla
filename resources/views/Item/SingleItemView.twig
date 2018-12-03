@@ -29,4 +29,14 @@
             {{ ImageCarouselOverride }}
         {% endif %}
     </div>
+    <div slot="IsOutfit">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 175 %}
+                <span class="text-muted">
+                    <strong>{{ property.property.names.name }}:</strong>
+                    <span>{{ property.texts.value }}</span>
+                </span>
+            {% endif %}
+        {% endfor %}
+    </div>
 </single-item>
