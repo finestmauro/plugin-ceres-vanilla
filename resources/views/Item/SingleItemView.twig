@@ -34,7 +34,7 @@
         {% for property in item.documents[0].data.properties %}
             {% if property.property.id == 175 %}
                 {% set isOutfit = 1 %}
-                {% if isOutfit is 1 %}
+                {% if isOutfit == 1 %}
                     <div class="h4 p-t-1"><span class="text-double alex">Das perfekte Outfit für Sie zusammengestellt</span></div>
                 {% else %}
                     <div class="h4 p-t-1"><span class="text-double alex">Die passenden Artikel für Sie zusammengestellt</span></div>
@@ -47,7 +47,7 @@
         {% for property in item.documents[0].data.properties %}
             {% if property.property.id == 175 %}
                 {% set isOutfit = 1 %}
-                {% if isOutfit is 1 %}
+                {% if isOutfit == 1 %}
                     <div class="row m-y-1">
                         <div class="col-xs-12 col-sm-7 col-md-12 col-lg-8 m-y-1">
                             <button class="btn btn-block btn-info">
