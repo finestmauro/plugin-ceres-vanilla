@@ -1,5 +1,5 @@
-{{ component( "Ceres::Containers.Components.ContainerItemList" ) }}
-{{ component( "Ceres::Containers.Components.LastSeenItemList" ) }}
+{{ component( "CeresVanilla::Containers.Components.ContainerItemList" ) }}
+{{ component( "CeresVanilla::Containers.Components.LastSeenItemList" ) }}
 
 {% set listType = config("Ceres.item.lists." ~ itemListNo ~ ".list_type") %}
 {% set tagIds = config("Ceres.item.lists." ~ itemListNo ~ ".tag_ids") | split(",") %}
