@@ -26,6 +26,14 @@
                     {# includeCached('Ceres::PageDesign.Partials.Header.NavigationList.twig') #}
                     {% include "CeresVanilla::PageDesign.Partials.Header.NavigationList" %}
                 {% endif %}
+                <div id="searchBoxDesk" class="cmp cmp-search-box collapse in" aria-expanded="true">
+                    <div class="search-box-inner">
+                        <div class="search-box-shadow-frame">
+                            <input type="search" name="Params[SearchParam]" autofocus="autofocus" placeholder="Suche" class="search-input">
+                            <button type="submit" class="search-submit"><i class="fa fa-search sm-up"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
             {% endif %}
         </div>

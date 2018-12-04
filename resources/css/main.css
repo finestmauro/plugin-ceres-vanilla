@@ -221,6 +221,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     border: 1px solid #efefef;
 }
 
+#searchBoxDesk {
+    display: none;
+}
+
 @media (min-width: 768px) {
 
     #vue-app {
@@ -261,7 +265,25 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 @media (min-width: 992px) {
 
     #vue-app {
-        margin-top: 198px !important;
+        margin-top: 190px !important;
+    }
+
+    #mainNavbarCollapsable ul.mainmenu > li > a {
+        padding: 1rem 1rem;
+        letter-spacing: 1px;
+    }
+
+    #searchBoxDesk {
+        background: none;
+        bottom: 0;
+        display: block;
+        height: 48px;
+        left: auto;
+        padding: 0 1rem;
+        position: absolute;
+        right: 0;
+        top: auto;
+        width: 220px;
     }
 
     .brand-wrapper {
@@ -287,11 +309,6 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
         max-width: 100%;
     }
 
-    #mainNavbarCollapsable ul.mainmenu > li > a {
-        padding: 1.3rem 1.3rem;
-        letter-spacing: 2px;
-    }
-
     .no-touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li:hover,
     .touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li.hover {
         background: #efefef;
@@ -315,7 +332,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
