@@ -281,17 +281,7 @@
                 </div>
         	</div>
 
-        	<div class="row text-center m-b-1">
-                <div class="col-xs-12">
-                    <div class="h3 p-t-1"><span class="text-double alex">Zuletzt angesehen</span></div>
-                </div>
-        	</div>
-
-        	<div class="row text-center m-b-3">
-                <div class="col-xs-12">
-        			{% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 1 } %}
-                </div>
-        	</div>
+            {% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 1 } %}
 
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
