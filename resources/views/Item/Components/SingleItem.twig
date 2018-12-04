@@ -33,7 +33,7 @@
                     <div class="m-b-3">
                         <span class="articlenumber small text-muted">
                             <b>{{ trans("Ceres::Template.singleItemNumber") }}</b>
-                            <span>${ currentVariation.variation.number }</span>
+                            <span>${ currentVariation.variation.id }</span>
                         </span>
                     </div>
 
@@ -70,20 +70,6 @@
                         <sup>*</sup>
                         <span :content="currentVariation.prices.default.currency"></span>
                     </span>
-
-                    <div class="base-price text-muted m-y-1" v-if="currentVariation.unit">
-                        <div>
-                            {{ trans("Ceres::Template.singleItemContent") }}
-                            <span>${ currentVariation.unit.content | numberFormat }</span>
-                            <span>${ currentVariation.unit.names.name }</span>
-                        </div>
-                        <div v-if="currentVariation.variation.mayShowUnitPrice">
-                            {{ trans("Ceres::Template.singleItemUnitPrice") }}
-                            <span class="base-price-value">
-                                ${ variationGraduatedPrice.basePrice }
-                            </span>
-                        </div>
-                    </div>
 
                     <slot name="AfterPrice"></slot>
 
