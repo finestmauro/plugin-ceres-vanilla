@@ -5,7 +5,7 @@ html {
 }
 
 #vue-app {
-    margin-top: 98px !important;
+    margin-top: 90px !important;
 }
 
 body, body > #vue-app, body > #vue-error, .navbar, .page-content {
@@ -228,7 +228,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 @media (min-width: 768px) {
 
     #vue-app {
-        margin-top: 93px !important;
+        margin-top: 86px !important;
     }
 
 	.main-teaser .h2 {
@@ -265,7 +265,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 @media (min-width: 992px) {
 
     #vue-app {
-        margin-top: 190px !important;
+        margin-top: 182px !important;
     }
 
     #mainNavbarCollapsable ul.mainmenu > li > a {
