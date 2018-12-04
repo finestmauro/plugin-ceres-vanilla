@@ -1,5 +1,13 @@
 /* Enter your CSS here */
 
+html {
+    font-size: 13px;
+}
+
+#vue-app {
+    margin-top: 98px !important;
+}
+
 body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     background-color: #fff;
 }
@@ -215,6 +223,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
 @media (min-width: 768px) {
 
+    #vue-app {
+        margin-top: 93px !important;
+    }
+
 	.main-teaser .h2 {
 	    font-size: 42px;
     	letter-spacing: 8px;
@@ -247,6 +259,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 @media (min-width: 992px) {
+
+    #vue-app {
+        margin-top: 198px !important;
+    }
 
     .brand-wrapper {
         display: block;
