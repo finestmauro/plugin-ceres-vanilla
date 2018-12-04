@@ -12,14 +12,25 @@
     {% set itemList = services.itemList.getItemList( listType, tagIds ).documents %}
 {% endif %}
 
-<div class="row">
-    {% if listType == "last_seen" %}
-        <last-seen-item-list>
-            <div>
-                {% include 'Ceres::Containers.Partials.ItemLists.ItemListHeader' with { itemListNo: itemListNo, listType: listType, isHome: isHome } %}
-            </div>
-        </last-seen-item-list>
-    {% elseif itemList is not empty %}
-        <container-item-list :items="{{ itemList | json_encode }}"></container-item-list>
-    {% endif %}
+{% if listType == "last_seen" %}
+<div class="row text-center m-b-1">
+    <div class="col-xs-12">
+        <div class="h3 p-t-1"><span class="text-double alex">Zuletzt angesehen</span></div>
+    </div>
 </div>
+<div class="row text-center m-b-3">
+    <div class="col-xs-12">
+        <div class="row">
+            <last-seen-item-list>
+                <div>
+                    {% include 'Ceres::Containers.Partials.ItemLists.ItemListHeader' with { itemListNo: itemListNo, listType: listType, isHome: isHome } %}
+                </div>
+            </last-seen-item-list>
+        </div>
+    </div>
+</div>
+{% elseif itemList is not empty %}
+    <div class="row">
+        <container-item-list :items="{{ itemList | json_encode }}"></container-item-list>
+    </div>
+{% endif %}
