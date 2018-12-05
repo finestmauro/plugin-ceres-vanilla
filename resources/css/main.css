@@ -260,6 +260,14 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
         margin: 0;
         padding: 5px;
     }
+
+    .owl-thumbs .owl-stage {
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+
+    .owl-thumbs .carousel-control {
+        display: none !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -277,13 +285,32 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
         background: none;
         bottom: 0;
         display: block;
-        height: 48px;
+        height: 45px;
         left: auto;
-        padding: 0 1rem;
+        padding: 0;
         position: absolute;
         right: 0;
         top: auto;
         width: 220px;
+    }
+
+    #searchBoxDesk .input-group {
+        display: flex;
+    }
+
+    #searchBoxDesk .input-group > .form-control {
+        display: block;
+        flex: 1 1 auto;
+        line-height: 1;
+        margin: 0;
+        padding: 5px 10px;
+        position: relative;
+        width: 1%;
+        -webkit-box-flex: 1;
+    }
+
+    #searchBoxDesk .input-group .input-group-append {
+        display: flex;
     }
 
     .brand-wrapper {
