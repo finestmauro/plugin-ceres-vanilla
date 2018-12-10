@@ -263,18 +263,18 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 #tendenzer .size-marker {
     color: #333;
     font-size: 16px;
-    height: 0;
+    line-height: 20px;
     margin: 0 0 0 -16px;
     opacity: 0;
     position: absolute;
     text-align: center;
-    top: 38px;
+    top: 40px;
     width: 32px;
     z-index: 10;
 }
 
 #tendenzer .size-marker.marker-top {
-    top: -10px;
+    top: -12px;
 }
 
 @media (min-width: 768px) {

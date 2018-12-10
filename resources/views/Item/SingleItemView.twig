@@ -60,7 +60,7 @@
     <div slot="tendenzerWert">
     {% for property in item.documents[0].data.properties %}
         {% if property.property.id == 174 %}
-            <div id="tendenzerWert" class="d-none">{{ property.texts.value }}</div>
+            <div id="tendenzerWert" class="hidden">{{ property.texts.value }}</div>
         {% endif %}
     {% endfor %}
     </div>
