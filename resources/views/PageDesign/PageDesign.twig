@@ -339,10 +339,8 @@ jQuery(document).ready(function () {
 	var tendenzerWert = -1;
 	tendenzerWert = jQuery("#tendenzerWert").html();
 
-    console.log(tendenzerWert);
-
-	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 ) {
-
+	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 )
+    {
 		jQuery("#tendenzer").show();
 
 	    var position = "";
@@ -351,6 +349,43 @@ jQuery(document).ready(function () {
 
 		jQuery(".size-marker").animate({left: position+'%', opacity: 1}, 2000);
 	}
+
+
+    var itemId = -1;
+    itemId = jQuery("#itemId").html();
+
+    if ( itemId != -1 )
+    {
+    	var dataString = 'id='+itemId;
+    	var url = "https://www.finest-trachten.info/shop/youtube.php";
+
+    	jQuery.ajax({
+    		type: "POST",
+    		url: url,
+    		data: dataString,
+    		success: function(data) {
+    			if(data == 'NULL') {
+    			 	jQuery("#youtube").remove();
+    			 	jQuery("#artikel-video").remove();
+    			} else {
+    				jQuery("#youtube iframe").remove();
+    				jQuery('<iframe width="565" height="318" frameborder="0" allowfullscreen></iframe>')
+    					    .attr("src", "https://www.youtube.com/embed/" + $.trim(data) + "?rel=0")
+    					    .appendTo("#youtube");
+    			}
+    		}
+    	});
+    }
+
+	jQuery(".artikel-video").click(function(event) {
+		jQuery("#single-carousel").hide();
+		jQuery("#youtube").show();
+	});
+
+	jQuery(".owl-thumb").click(function(event) {
+		jQuery("#youtube").hide();
+		jQuery("#single-carousel").show();
+	});
 });
 </script>
 
