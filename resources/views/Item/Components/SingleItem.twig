@@ -37,6 +37,18 @@
                         </span>
                     </div>
 
+                    <slot name="tendenzerWert"></slot>
+
+        	        <div id="tendenzer" class="m-b-3 d-none">
+					    <div class="size-marker marker-top"><i class="fa fa-chevron-down"></i></div>
+					    <div class="marker-labels">
+					        <div class="label-1" style="width:33.333%;">fällt klein<br> aus</div>
+					        <div class="label-2" style="width:33.333%;">fällt normal<br> aus</div>
+					        <div class="label-3" style="width:33.333%;">fällt groß<br> aus</div>
+					    </div>
+					    <div class="size-marker marker-bottom"><i class="fa fa-chevron-up"></i></div>
+        	        </div>
+
                     <!-- Variation -->
                     <div class="row m-b-1" v-if="variations.length > 0">
                         <variation-select template="#vue-variation-select" :attributes="attributeNameMap" :variation-units="variationUnits" :variations="variations" :preselect="currentVariation.variation.id" :unitPreselect="currentVariation.variation.unitCombinationId" @is-valid-change="isVariationSelected = $event"></variation-select>
@@ -287,4 +299,23 @@
             <slot name="FeedbackContainer"></slot>
         </div>
     </div>
+</script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	var tendenzerWert = -1;
+	tendenzerWert = $("#tendenzerWert").html();
+
+	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 ) {
+
+		$("#tendenzer").removeClass('d-none');
+
+	    var position = "";
+		position = (100 * tendenzerWert) ;
+		position = Math.round(position);
+
+		$(".size-marker").animate({left: position+'%', opacity: 1}, 2000);
+	}
+});
 </script>

@@ -123,9 +123,9 @@
         {% endif %}
 
         {% if ceresConfig.item.showCategoryDescription %}
-        <div class="m-b-2 row">
+        <div id="category-description-container" class="m-b-2 row">
             <div class="col-xs-12">
-                <div id="category-description-container" class="category-description m-b-1">{{ category.details[0].description2 | raw }}</div>
+                <div class="category-description m-b-1">{{ category.details[0].description2 | raw }}</div>
                 <div class="category-description m-b-1">{{ category.details[0].description | raw }}</div>
             </div>
         </div>
