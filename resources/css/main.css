@@ -252,12 +252,12 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 #tendenzer .marker-labels > div.label-1,
 #tendenzer .marker-labels > div.label-3 {
     color: #fff;
-    background-color: rgba(0,255,0,.5);
+    background-color: #690;
 }
 
 #tendenzer .marker-labels > div.label-2 {
     color: #690;
-    background-color: rgba(0,255,0,.1);
+    background-color: #fff);
 }
 
 #tendenzer .size-marker {

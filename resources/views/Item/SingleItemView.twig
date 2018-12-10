@@ -58,10 +58,14 @@
         {% endif %}
     </div>
     <div slot="tendenzerWert">
-        {% for property in item.documents[0].data.properties %}
-            {% if property.property.id == 174 %}
-                <div id="tendenzerWert" class="d-none">{{ property.texts.value }}</div>
-            {% endif %}
-        {% endfor %}
+    {% for property in item.documents[0].data.properties %}
+        <div>
+        <span class="articlenumber small text-muted">
+            <strong>{{ property.property.id }}</strong>
+            <strong>{{ property.property.names.name }}</strong>
+            <span>{{ property.texts.value  }}</span>
+        </span>
+        </div>
+    {% endfor %}
     </div>
 </single-item>
