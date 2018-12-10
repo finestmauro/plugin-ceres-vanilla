@@ -231,9 +231,6 @@
                     var children = header.children;
                     for( var i = 0; i < children.length; i++ )
                     {
-                        console.log(children[i]);
-                        console.log(children[i].getBoundingClientRect().height);
-
                         bodyOffset += children[i].getBoundingClientRect().height;
                     }
 
@@ -342,9 +339,11 @@ jQuery(document).ready(function () {
 	var tendenzerWert = -1;
 	tendenzerWert = jQuery("#tendenzerWert").html();
 
+    console.log(tendenzerWert);
+
 	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 ) {
 
-		jQuery("#tendenzer").removeClass('d-none');
+		jQuery("#tendenzer").show();
 
 	    var position = "";
 		position = (100 * tendenzerWert) ;
