@@ -230,6 +230,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 #tendenzer {
+    border: 1px solid #690;
     position: relative;
 }
 
@@ -250,11 +251,13 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
 #tendenzer .marker-labels > div.label-1,
 #tendenzer .marker-labels > div.label-3 {
-    background-color: #690;
+    color: #fff;
+    background-color: rgba(0,255,0,.5);
 }
 
 #tendenzer .marker-labels > div.label-2 {
-    background-color: rgba(0,255,0,.05);
+    color: #690;
+    background-color: rgba(0,255,0,.1);
 }
 
 #tendenzer .size-marker {

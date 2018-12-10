@@ -338,6 +338,20 @@ jQuery(document).ready(function () {
 			}
 		}
 	});
+
+	var tendenzerWert = -1;
+	tendenzerWert = jQuery("#tendenzerWert").html();
+
+	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 ) {
+
+		jQuery("#tendenzer").removeClass('d-none');
+
+	    var position = "";
+		position = (100 * tendenzerWert) ;
+		position = Math.round(position);
+
+		jQuery(".size-marker").animate({left: position+'%', opacity: 1}, 2000);
+	}
 });
 </script>
 

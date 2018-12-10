@@ -300,22 +300,3 @@
         </div>
     </div>
 </script>
-
-<script type="text/javascript">
-$(document).ready(function()
-{
-	var tendenzerWert = -1;
-	tendenzerWert = $("#tendenzerWert").html();
-
-	if ( tendenzerWert != -1 && tendenzerWert != undefined && tendenzerWert != 0 ) {
-
-		$("#tendenzer").removeClass('d-none');
-
-	    var position = "";
-		position = (100 * tendenzerWert) ;
-		position = Math.round(position);
-
-		$(".size-marker").animate({left: position+'%', opacity: 1}, 2000);
-	}
-});
-</script>
