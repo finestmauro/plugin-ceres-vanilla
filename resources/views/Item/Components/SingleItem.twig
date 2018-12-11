@@ -44,9 +44,9 @@
         	        <div id="tendenzer" class="m-b-3 hidden">
 					    <div class="size-marker marker-top"><i class="fa fa-chevron-down"></i></div>
 					    <div class="marker-labels">
-					        <div class="label-1" style="width:33.333%;">fällt klein<br> aus</div>
-					        <div class="label-2" style="width:33.333%;">fällt normal<br> aus</div>
-					        <div class="label-3" style="width:33.333%;">fällt groß<br> aus</div>
+					        <div class="label-1">fällt klein aus</div>
+					        <div class="label-2">fällt normal aus</div>
+					        <div class="label-3">fällt groß aus</div>
 					    </div>
 					    <div class="size-marker marker-bottom"><i class="fa fa-chevron-up"></i></div>
         	        </div>
@@ -151,6 +151,10 @@
                         </li>
 
                         <slot name="AddDetailTabs"></slot>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#our-service" role="tab">Unser Service</a>
+                        </li>
                     </ul>
 
                     <div class="tab-content text-justify">
@@ -265,6 +269,22 @@
                         </div>
 
                         <slot name="AddDetailTabsContent"></slot>
+
+                        <div class="tab-pane" id="our-service" role="tabpanel">
+                            <div class="m-y-2">
+								<img src="/layout/2018/images/trusted-shops.gif" alt="Trusted Shops Garantie" class="pull-right">
+								<ul>
+									<li><i class="fa fa-check"></i> Kauf auf Rechnung</li>
+									<li><i class="fa fa-check"></i> 30 Tage Rückgaberecht</li>
+									<li><i class="fa fa-check"></i> Schneller Versand mit DHL</li>
+									<li><i class="fa fa-check"></i> Bezahlen per Paypal</li>
+									<li><i class="fa fa-check"></i> <b>Kostenloser</b> Versand und Rücksendung <small>(DE)</small></li>
+									<li><i class="fa fa-check"></i> Hotline: +49 (0)8136 30 49 080</li>
+									<li class="p-l-3"><small>Mo.-Fr. 10:00-18:00 Uhr zu üblichen Festnetzgebühren, Mobilfunk max. 0,42 € / Minute</small></li>
+									<li><i class="fa fa-check"></i> E-Mail: <a href="mailto:info@finest-trachten.de?subject=Frage%20zum%20Artikel%20601">info@finest-trachten.de</a></li>
+								</ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
