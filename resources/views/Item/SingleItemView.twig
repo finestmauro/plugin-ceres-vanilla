@@ -64,4 +64,111 @@
         {% endif %}
     {% endfor %}
     </div>
+    <div slot="aussenmaterial">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 114 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="schuerzenmaterial">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 115 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="stil">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 116 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="art">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 117 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="schnitt">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 118 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="armlaengen">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 119 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="innenmaterial">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 123 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="waschanleitung">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 124 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="laenge">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 135 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="material">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 136 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="lieferumfang">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 194 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="gesamtlaenge">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 195 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="verschluss">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 223 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="absatzform">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 224 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div slot="absatzhoehe">
+    {% for property in item.documents[0].data.properties %}
+        {% if property.property.id == 225 %}
+            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+
 </single-item>

@@ -225,6 +225,22 @@
                                         </tr>
                                     {% endif %}
 
+                                    <slot name="aussenmaterial"></slot>
+                                    <slot name="schuerzenmaterial"></slot>
+                                    <slot name="stil"></slot>
+                                    <slot name="art"></slot>
+                                    <slot name="schnitt"></slot>
+                                    <slot name="armlaengen"></slot>
+                                    <slot name="innenmaterial"></slot>
+                                    <slot name="waschanleitung"></slot>
+                                    <slot name="laenge"></slot>
+                                    <slot name="material"></slot>
+                                    <slot name="lieferumfang"></slot>
+                                    <slot name="gesamtlaenge"></slot>
+                                    <slot name="verschluss"></slot>
+                                    <slot name="absatzform"></slot>
+                                    <slot name="absatzhoehe"></slot>
+
                                     {% if 'item.variationBase_content' in itemData or 'all' in itemData %}
                                         <tr v-if="currentVariation.unit">
                                             <td>{{ trans("Ceres::Template.singleItemContent") }}</td>
