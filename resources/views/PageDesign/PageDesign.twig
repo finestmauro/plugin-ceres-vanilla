@@ -380,11 +380,14 @@ jQuery(document).ready(function () {
 	jQuery(".artikel-video").click(function(event) {
 		jQuery("#single-carousel").hide();
 		jQuery("#youtube").show();
+        jQuery(".artikel-video").addClass('active');
+        jQuery(".owl-thumb.active").removeClass('active');
 	});
 
 	jQuery(".owl-thumb").click(function(event) {
 		jQuery("#youtube").hide();
 		jQuery("#single-carousel").show();
+        jQuery(".artikel-video").removeClass('active');
 	});
 });
 </script>

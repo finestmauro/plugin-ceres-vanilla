@@ -277,6 +277,35 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     top: -12px;
 }
 
+.artikel-video {
+    cursor: pointer;
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.artikel-video:hover, .artikel-video.active {
+    border: 1px solid #c00;
+}
+
+.artikel-video i {
+    color: #c00;
+    font-size: 32px;
+    height: 32px;
+    left: 0;
+    margin-top: -16px;
+    opacity: .75;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+}
+
+.artikel-video:hover i {
+    opacity: 1;
+}
+
 @media (min-width: 768px) {
 
     #vue-app {
