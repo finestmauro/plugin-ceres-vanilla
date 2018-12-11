@@ -390,6 +390,11 @@ jQuery(document).ready(function () {
         jQuery(".artikel-video").removeClass('active');
 	});
 });
+
+jQuery(".breadcrumb-back").click(function(event) {
+	event.preventDefault();
+	history.back(1);
+});
 </script>
 
 {{ get_shop_builder_scripts( "latest", ceresConfig.log.performanceLevel == 'live') }}
