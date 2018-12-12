@@ -280,8 +280,9 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 .artikel-video {
     border: 1px solid #fff;
     cursor: pointer;
+    padding: 100% 0 0 !important;
     position: relative;
-    width: 100%;
+    width: 100% !important;
 }
 
 .artikel-video:hover, .artikel-video.active {
