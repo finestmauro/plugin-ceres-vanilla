@@ -33,11 +33,9 @@
                     <div class="m-b-3">
                         <span class="articlenumber small text-muted">
                             <b>{{ trans("Ceres::Template.singleItemNumber") }}</b>
-                            <span>${ currentVariation.variation.id }</span>
+                            <span id="itemId">{ currentVariation.item.id }</span>
                         </span>
                     </div>
-
-                    <div id="itemId" class="hidden">${ currentVariation.item.id }</div>
 
                     <slot name="tendenzerWert"></slot>
 
@@ -128,6 +126,13 @@
                     </span>
 
                     <slot name="AdditionalContentAfterVAT"></slot>
+
+                    <div class="text-center">
+                        <p class="w-100 m-t-3 m-b-2 h1">
+                            <span class="text-double alex">5%</span> <span class="text-large alex">Gutschein geschenkt!</span>
+                        </p>
+                        <p class="w-100 m-b-3 p-y-1 b-y-s-1 h4 text-uppercase">Gleich den Newsletter abonnieren!</p>
+                    </div>
 
                 </div>
 
