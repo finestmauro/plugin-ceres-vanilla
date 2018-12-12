@@ -115,7 +115,7 @@ class CeresVanillaServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.checkout', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresVanilla::Checkout.Checkout');
+                $container->setTemplate('CeresVanilla::Checkout.CheckoutView');
                 return false;
             }, self::PRIORITY);
         }
