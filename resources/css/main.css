@@ -329,6 +329,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     position: absolute;
     text-align: center;
     text-transform: uppercase;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
