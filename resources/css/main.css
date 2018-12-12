@@ -315,6 +315,22 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     content: "";
 }
 
+.category-teaser {
+    background: #fafafa;
+    padding-top: 30%;
+    position: relative;
+    width: 100%;
+}
+
+.category-teaser .category-title {
+    bottom: 30px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
 
     #vue-app {
