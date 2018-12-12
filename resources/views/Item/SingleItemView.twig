@@ -64,156 +64,172 @@
         {% endif %}
     {% endfor %}
     </div>
-    <tr slot="aussenmaterial">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 114 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
 
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="schuerzenmaterial">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 115 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="stil">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 116 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="art">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 117 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="schnitt">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 118 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="armlaengen">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 119 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="innenmaterial">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 123 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="waschanleitung">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 124 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="laenge">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 135 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="material">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 136 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="lieferumfang">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 194 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="gesamtlaenge">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 195 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="verschluss">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 223 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="absatzform">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 224 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
-    <tr slot="absatzhoehe">
-    {% for property in item.documents[0].data.properties %}
-        {% if property.property.id == 225 %}
-            {% set thisname = property.property.names.name %}
-        	{% set thisvalue = property.texts.value %}
-        {% endif %}
-    {% endfor %}
-
-    	<td>{{ thisname }}</td> <td>{{ thisvalue }}</td>
-    </tr>
+        <div slot="aussenmaterial">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 114 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="schuerzenmaterial">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 115 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="stil">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 116 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="art">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 117 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="schnitt">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 118 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="armlaengen">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 119 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="innenmaterial">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 123 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="waschanleitung">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 124 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="laenge">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 135 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="material">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 136 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="lieferumfang">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 194 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="gesamtlaenge">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 195 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="verschluss">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 223 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="absatzform">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 224 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div slot="absatzhoehe">
+        {% for property in item.documents[0].data.properties %}
+            {% if property.property.id == 225 %}
+                <table class="table table-hover table-sm m-0">
+    	            <tbody>
+    		            <tr><td>{{ property.property.names.name }}</td> <td>{{ property.texts.value }}</td></tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+        </div>
 
 
 </single-item>
