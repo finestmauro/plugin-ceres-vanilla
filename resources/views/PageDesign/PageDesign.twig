@@ -384,7 +384,7 @@ jQuery(document).ready(function () {
         jQuery(".owl-thumb.active").removeClass('active');
 	});
 
-	jQuery(".owl-thumb").click(function(event) {
+	jQuery(".owl-thumb:not(.artikel-video)").click(function(event) {
 		jQuery("#youtube").hide();
 		jQuery("#single-carousel").show();
         jQuery(".artikel-video").removeClass('active');
