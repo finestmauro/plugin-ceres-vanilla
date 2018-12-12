@@ -174,7 +174,7 @@
 
                         <div :class="{ 'active': !isDescriptionTabActive && !isTechnicalDataTabActive }" class="tab-pane" id="assessments-details" role="tabpanel">
                             <div class="m-y-2">
-                                <table class="table table-hover table-sm">
+                                <table class="table table-hover table-sm m-y-0">
                                     <tbody>
                                     {% if 'item.id' in itemData or 'all' in itemData %}
                                         <tr>
@@ -225,22 +225,6 @@
                                         </tr>
                                     {% endif %}
 
-                                    <slot name="material"></slot>
-                                    <slot name="aussenmaterial"></slot>
-                                    <slot name="innenmaterial"></slot>
-                                    <slot name="schuerzenmaterial"></slot>
-                                    <slot name="stil"></slot>
-                                    <slot name="art"></slot>
-                                    <slot name="schnitt"></slot>
-                                    <slot name="laenge"></slot>
-                                    <slot name="armlaengen"></slot>
-                                    <slot name="gesamtlaenge"></slot>
-                                    <slot name="waschanleitung"></slot>
-                                    <slot name="lieferumfang"></slot>
-                                    <slot name="verschluss"></slot>
-                                    <slot name="absatzform"></slot>
-                                    <slot name="absatzhoehe"></slot>
-
                                     {% if 'item.variationBase_content' in itemData or 'all' in itemData %}
                                         <tr v-if="currentVariation.unit">
                                             <td>{{ trans("Ceres::Template.singleItemContent") }}</td>
@@ -281,6 +265,21 @@
                                     {% endif %}
                                     </tbody>
                                 </table>
+                                <slot name="material"></slot>
+                                <slot name="aussenmaterial"></slot>
+                                <slot name="innenmaterial"></slot>
+                                <slot name="schuerzenmaterial"></slot>
+                                <slot name="stil"></slot>
+                                <slot name="art"></slot>
+                                <slot name="schnitt"></slot>
+                                <slot name="laenge"></slot>
+                                <slot name="armlaengen"></slot>
+                                <slot name="gesamtlaenge"></slot>
+                                <slot name="waschanleitung"></slot>
+                                <slot name="lieferumfang"></slot>
+                                <slot name="verschluss"></slot>
+                                <slot name="absatzform"></slot>
+                                <slot name="absatzhoehe"></slot>
                             </div>
                         </div>
 
