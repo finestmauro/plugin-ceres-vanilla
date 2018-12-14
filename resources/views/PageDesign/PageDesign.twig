@@ -86,8 +86,9 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <div class="modal-title h3">Newsletter abonnieren und 5% Gutschein erhalten</div>
                         </div>
-                        <script id="n2g_script">!function(e,t,n,c,r,a,i){e.Newsletter2GoTrackingObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,a=t.createElement(n),i=t.getElementsByTagName(n)[0],a.async=1,a.src=c,i.parentNode.insertBefore(a,i)}(window,document,"script","https://static.newsletter2go.com/utils.js","n2g");
-</script>
+                        <div class="modal-body">
+                            <iframe src="https://subscribe.newsletter2go.com/?n2g=fanxzmrb-bfj5rcub-6yb&_ga=2.87572447.675473470.1544773725-1496656854.1544618929" id="n2go" width="100%" onload="iframeLoaded()" style="border: none;" allowfullscreen> </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -408,16 +409,15 @@ jQuery(document).ready(function () {
 		jQuery("#single-carousel").show();
         jQuery(".artikel-video").removeClass('active');
 	});
-
-    var config = {  "container": {"type":"div","class":"modal-body","style":""},
-                    "row": {"type":"div","class":"","style":"margin-top: 15px;"},
-                    "columnLeft": {"type":"div","class":"","style":"" },
-                    "columnRight": {"type":"div","class":"","style":""},
-                    "label": {"type":"label","class":"","style":""}
-                    };
-    n2g('create', 'fanxzmrb-bfj5rcub-6yb');
-    n2g('subscribe:createForm', config);
 });
+
+function iframeLoaded() {
+    var iframeId = document.getElementById('n2go');
+    if(iframeId) {
+        iframeId.height = "";
+        iframeId.height = iframeId.contentWindow.document.body.scrollHeight + "px";
+    }
+}
 
 jQuery(".breadcrumb-back").click(function(event) {
 	event.preventDefault();
