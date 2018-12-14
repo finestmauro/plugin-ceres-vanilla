@@ -414,6 +414,7 @@ jQuery(document).ready(function () {
 function iframeLoaded() {
     var iframeId = document.getElementById('n2go');
     if(iframeId) {
+        console.log(iframeId.contentWindow.document.body.scrollHeight);
         iframeId.height = "";
         iframeId.height = iframeId.contentWindow.document.body.scrollHeight + "px";
     }
