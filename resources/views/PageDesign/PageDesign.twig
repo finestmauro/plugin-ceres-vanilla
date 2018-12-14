@@ -86,7 +86,8 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <div class="modal-title h3">Newsletter abonnieren und 5% Gutschein erhalten</div>
                         </div>
-                        <script id="n2g_script">!function(e,t,n,c,r,a,i){e.Newsletter2GoTrackingObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,a=t.createElement(n),i=t.getElementsByTagName(n)[0],a.async=1,a.src=c,i.parentNode.insertBefore(a,i)}(window,document,"script","https://static.newsletter2go.com/utils.js","n2g");var config = {"container": {"type": "div","class": "","style": ""},"row": {"type": "div","class": "","style": "margin-top: 15px;"},"columnLeft": {"type": "div","class": "","style": ""},"columnRight": {"type": "div","class": "","style": ""},"label": {"type": "label","class": "","style": ""}};n2g('create', 'fanxzmrb-bfj5rcub-6yb');n2g('subscribe:createForm', config);</script>
+                        <script id="n2g_script">!function(e,t,n,c,r,a,i){e.Newsletter2GoTrackingObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,a=t.createElement(n),i=t.getElementsByTagName(n)[0],a.async=1,a.src=c,i.parentNode.insertBefore(a,i)}(window,document,"script","https://static.newsletter2go.com/utils.js","n2g");
+</script>
                     </div>
                 </div>
             </div>
@@ -407,6 +408,15 @@ jQuery(document).ready(function () {
 		jQuery("#single-carousel").show();
         jQuery(".artikel-video").removeClass('active');
 	});
+
+    var config = {  "container": {"type":"div","class":"modal-body","style":""},
+                    "row": {"type":"div","class":"","style":"margin-top: 15px;"},
+                    "columnLeft": {"type":"div","class":"","style":"" },
+                    "columnRight": {"type":"div","class":"","style":""},
+                    "label": {"type":"label","class":"","style":""}
+                    };
+    n2g('create', 'fanxzmrb-bfj5rcub-6yb');
+    n2g('subscribe:createForm', config);
 });
 
 jQuery(".breadcrumb-back").click(function(event) {
