@@ -290,6 +290,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     top: -12px;
 }
 
+#single-image #single-carousel .owl-item img {
+    padding: 15px;
+}
+
 .artikel-video {
     border: 1px solid #fff;
     cursor: pointer;
@@ -367,6 +371,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 @media (min-width: 544px) {
+
     .category-teaser {
         background-position: center 20%;
         padding-top: 40%;
@@ -374,6 +379,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 @media (min-width: 768px) {
+
+    #single-image #single-carousel .owl-item img {
+        padding: 30px;
+    }
 
     #vue-app {
         margin-top: 86px !important;
