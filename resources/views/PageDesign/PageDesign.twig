@@ -158,6 +158,26 @@
     {% include "Ceres::PageDesign.Partials.VueError" %}
 </div>
 
+<script type="x/template" id="vue-newsletter-form">
+    <div>
+        <form :id="newsletter-form" class="m-b-1">
+            <div class="modal fade" id="newsletterForm" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <div class="modal-title h3">Newsletter abonnieren</div>
+                        </div>
+                        <div class="modal-body">
+                            <script id="n2g_script">!function(e,t,n,c,r,a,i){e.Newsletter2GoTrackingObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,a=t.createElement(n),i=t.getElementsByTagName(n)[0],a.async=1,a.src=c,i.parentNode.insertBefore(a,i)}(window,document,"script","https://static.newsletter2go.com/utils.js","n2g");var config = {"container": {"type": "div","class": "","style": ""},"row": {"type": "div","class": "","style": "margin-top: 15px;"},"columnLeft": {"type": "div","class": "","style": ""},"columnRight": {"type": "div","class": "","style": ""},"label": {"type": "label","class": "","style": ""}};n2g('create', 'fanxzmrb-bfj5rcub-6yb');n2g('subscribe:createForm', config);</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
 <div id="newsletter-form">
     <div v-if="showModal">
         <transition name="modal">
