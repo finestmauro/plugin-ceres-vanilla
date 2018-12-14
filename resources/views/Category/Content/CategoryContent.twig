@@ -13,17 +13,17 @@
 
     {% set shopBuilderTemplate = shop_builder_category_template(category.id) %}
     {% if shopBuilderTemplate | trim is not empty %}
-        <div class="container-max">
-            <div class="row">
-                <div class="col">
+        <div class="page-content container-max">
+            <div class="row m-y-2">
+                <div class="col-xs-12">
                     {{ shopBuilderTemplate | raw }}
                 </div>
             </div>
         </div>
     {% else %}
-        <div class="container-max">
-            <div class="row">
-                <div class="col">
+        <div class="page-content container-max">
+            <div class="row m-y-2">
+                <div class="col-xs-12">
                     {{ category.details[0].description | raw }}
                 </div>
             </div>
