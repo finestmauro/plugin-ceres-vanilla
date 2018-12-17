@@ -190,16 +190,19 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 .bg-img-1 {
-    background-image: url(https://www.finest-trachten.info/images/teaser/krueger-dirndl-1080-1080.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/8-11-hammerschmid-480.jpg);
 }
-.bg-img-3 {
-    background-image: url(https://www.finest-trachten.info/images/teaser/marjo-trachten-1080-1080.jpg);
-}
+
 .bg-img-2 {
-    background-image: url(https://www.finest-trachten.info/images/teaser/lederhosen-1080-1080.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/8-11-marjo-480.jpg);
 }
+
+.bg-img-3 {
+    background-image: url(https://www.finest-trachten.info/images/teaser/8-11-invanhoe-480.jpg);
+}
+
 .bg-img-4 {
-    background-image: url(https://www.finest-trachten.info/images/teaser/sale-1080-1080.jpg);
+    background-image: url(https://www.finest-trachten.info/images/teaser/8-11-Sale-Herbst-480.jpg);
 }
 
 .teaser .h3 {
@@ -375,6 +378,22 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .category-teaser {
         background-position: center 20%;
         padding-top: 40%;
+    }
+
+    .bg-img-1 {
+        background-image: url(https://www.finest-trachten.info/images/teaser/8-11-hammerschmid-1080-1080.jpg);
+    }
+
+    .bg-img-2 {
+        background-image: url(https://www.finest-trachten.info/images/teaser/8-11-marjo-1080-1080.jpg);
+    }
+
+    .bg-img-3 {
+        background-image: url(https://www.finest-trachten.info/images/teaser/8-11-invanhoe-1080-1080.jpg);
+    }
+
+    .bg-img-4 {
+        background-image: url(https://www.finest-trachten.info/images/teaser/8-11-Sale-Herbst-1080-1080.jpg);
     }
 }
 
