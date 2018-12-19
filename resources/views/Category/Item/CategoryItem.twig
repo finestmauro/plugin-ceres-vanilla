@@ -133,18 +133,12 @@
         </div>
         {% endif %}
 
-        {% if ceresConfig.item.showCategoryDescription %}
         <div id="category-description-container" class="m-b-2 row">
             <div class="col-xs-12">
-                {% if categoryDescriptionBottom == "description2" or categoryDescriptionBottom == "both" %}
                     <div class="category-description m-b-1" data-category-description="2">{{ category.details[0].description2 | raw }}</div>
-                {% endif %}
-                {% if categoryDescriptionBottom == "description1" or categoryDescriptionBottom == "both" %}
                     <div class="category-description m-b-1" data-category-description="1">{{ category.details[0].description | raw }}</div>
-                {% endif %}
             </div>
         </div>
-        {% endif %}
     </div>
 
 {% endblock %}
