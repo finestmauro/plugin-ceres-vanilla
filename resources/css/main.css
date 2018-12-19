@@ -380,7 +380,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     .parallax-img-container[style^='background-image'].category-teaser {
         background-position: center 20%;
         height: auto;
-        padding-top: 40%;
+        padding-top: 33.333%%;
     }
 
     .bg-img-1 {
