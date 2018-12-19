@@ -335,10 +335,12 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     content: "";
 }
 
-.category-teaser {
+.parallax-img-container[style^='background-image'].category-teaser {
     background: #fafafa;
+    background-attachment: inherit;
     background-position: center;
     background-size: cover;
+    height: auto;
     padding-top: 100%;
     position: relative;
     width: 100%;
@@ -375,8 +377,9 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
 @media (min-width: 544px) {
 
-    .category-teaser {
+    .parallax-img-container[style^='background-image'].category-teaser {
         background-position: center 20%;
+        height: auto;
         padding-top: 40%;
     }
 
@@ -398,6 +401,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 }
 
 @media (min-width: 768px) {
+
+    .parallax-img-container[style^='background-image'].category-teaser {
+        height: auto;
+    }
 
     #single-image #single-carousel .owl-item img {
         padding: 30px;
