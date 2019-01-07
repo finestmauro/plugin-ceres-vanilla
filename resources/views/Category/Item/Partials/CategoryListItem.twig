@@ -13,11 +13,7 @@
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
     <div class="thumb-inner">
-        <script type="x/template" id="vue-add-to-wish-list">
-            <a class="text-muted small add-to-wish-list" :class="{active: isVariationInWishList}" @click.prevent="switchState()" data-toggle="tooltip" data-placement="top" title="">
-                <i v-waiting-animation="isLoading" class="fa fa-heart"></i>
-            </a>
-        </script>
+        {{ AddToBasket.printTwigComponent( item.data, true ) }}
 
         <div class="thumb-background"></div>
 
@@ -111,7 +107,7 @@
                     {% endif %}
 
                     <div class="price">
-                        {{ item.data.prices.default.unitPrice.formatted }} *
+                        {{ item.data.prices.default.unitPrice.formatted | specialOffer(item.data.prices, "unitPrice", "formatted") }} *
                     </div>
                 </div>
 
@@ -129,6 +125,8 @@
                 {% endif %}
 
             </div>
+
+            {{ AddToBasket.printTwigComponent( item.data ) }}
 
             <span class="vat-porto-info small text-muted">
                 * {% if services.customer.showNetPrices() %}{{ trans("Ceres::Template.itemExclVAT") }}{% else %}{{ trans("Ceres::Template.itemInclVAT") }}{% endif %} {{ trans("Ceres::Template.itemExclusive") }}
