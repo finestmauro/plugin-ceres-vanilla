@@ -536,6 +536,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li.level1 > a {
         color: #666;
+        text-transform: uppercase;
     }
 
     #mainNavbarCollapsable ul.mainmenu > li.ddown > a:after {
@@ -544,6 +545,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu {
         justify-content: flex-start;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > a {
+        text-transform: uppercase;
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
