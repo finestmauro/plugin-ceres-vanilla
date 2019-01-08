@@ -5,7 +5,7 @@
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
 
 {% set lang = services.sessionStorage.getLang() %}
-{% set itemId = item.data.id %}
+{% set itemId = item.id %}
 {% set variations = services.Item.getVariationIds(itemId) %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
 

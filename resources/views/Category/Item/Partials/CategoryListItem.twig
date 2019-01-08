@@ -6,7 +6,7 @@
 
 {% set image = item.data.images.all | first %}
 {% set itemUrl =  item.data | itemURL %}
-{% set itemId = item.data.id %}
+{% set itemId = item.id %}
 {% set variations = services.Item.getVariationIds(itemId) %}
 
 {% if enableCarousel is not defined %}
