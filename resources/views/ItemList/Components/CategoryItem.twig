@@ -1,12 +1,12 @@
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 {{ component( "Ceres::ItemList.Components.ItemStoreSpecial" ) }}
-{{ component( "CeresVanilla::Item.Components.VariationSelect" ) }}
 
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
 
 {% set lang = services.sessionStorage.getLang() %}
-{% set variations = services.Item.getVariationIds(item.data.id) %}
+{% set itemId = item.data.id %}
+{% set variations = services.Item.getVariationIds(itemId) %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
 
 {% if enableCarousel is not defined %}
@@ -60,6 +60,7 @@
                 <div class="thumb-content">
                     <a :href="itemData | itemURL" class="thumb-title small">
                         ${ itemData | itemName }
+                        ${ itemId }
                     </a>
                     <div class="thumb-meta">
                         <div class="prices">
@@ -83,10 +84,6 @@
                             <span v-if="itemData.variation.mayShowUnitPrice">| ${ itemData.prices.default.basePrice }</span>
                         </div>
                     </div>
-
-                    <!-- Variation -->
-                    <span id="variations">{{ variations }}</span>
-                    <!-- /Variation -->
 
                     {{ AddToBasket.printVueComponent( "itemData" ) }}
 

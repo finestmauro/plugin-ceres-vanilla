@@ -1,5 +1,4 @@
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-{{ component( "CeresVanilla::Item.Components.VariationSelect" ) }}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 {% import "Ceres::PageDesign.Macros.ItemName" as ItemName %}
@@ -7,7 +6,8 @@
 
 {% set image = item.data.images.all | first %}
 {% set itemUrl =  item.data | itemURL %}
-{% set variations = services.Item.getVariationIds(item.data.id) %}
+{% set itemId = item.data.id %}
+{% set variations = services.Item.getVariationIds(itemId) %}
 
 {% if enableCarousel is not defined %}
     {% set enableCarousel = ceresConfig.item.enableImageCarousel %}
@@ -95,6 +95,7 @@
         <div class="thumb-content">
             <a href="{{ itemUrl }}" class="thumb-title small">
                 {{ ItemName.get(item.data | itemName, item.data.variation.bundleType) }}
+                {{ itemId }}
             </a>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
@@ -127,10 +128,6 @@
                 {% endif %}
 
             </div>
-
-            <!-- Variation -->
-            <span id="variations">{{ variations }}</span>
-            <!-- /Variation -->
 
             {{ AddToBasket.printTwigComponent( item.data ) }}
 
