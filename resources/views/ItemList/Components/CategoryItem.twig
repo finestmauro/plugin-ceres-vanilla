@@ -1,6 +1,7 @@
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 {{ component( "Ceres::ItemList.Components.ItemStoreSpecial" ) }}
+{{ component( "CeresVanilla::Item.Components.VariationSelect" ) }}
 
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
 
@@ -81,6 +82,12 @@
                             <span v-if="itemData.variation.mayShowUnitPrice">| ${ itemData.prices.default.basePrice }</span>
                         </div>
                     </div>
+
+                    <!-- Variation -->
+                    <div class="row m-b-1" v-if="variations.length > 0">
+                        <variation-select template="#vue-variation-select" :attributes="attributeNameMap" :variation-units="variationUnits" :variations="variations" :preselect="currentVariation.variation.id" :unitPreselect="currentVariation.variation.unitCombinationId" @is-valid-change="isVariationSelected = $event"></variation-select>
+                    </div>
+                    <!-- /Variation -->
 
                     {{ AddToBasket.printVueComponent( "itemData" ) }}
 

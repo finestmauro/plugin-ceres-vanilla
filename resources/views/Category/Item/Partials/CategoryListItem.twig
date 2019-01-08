@@ -1,4 +1,5 @@
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+{{ component( "CeresVanilla::Item.Components.VariationSelect" ) }}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 {% import "Ceres::PageDesign.Macros.ItemName" as ItemName %}
@@ -125,6 +126,12 @@
                 {% endif %}
 
             </div>
+
+            <!-- Variation -->
+            <div class="row m-b-1" v-if="variations.length > 0">
+                <variation-select template="#vue-variation-select" :attributes="attributeNameMap" :variation-units="variationUnits" :variations="variations" :preselect="currentVariation.variation.id" :unitPreselect="currentVariation.variation.unitCombinationId" @is-valid-change="isVariationSelected = $event"></variation-select>
+            </div>
+            <!-- /Variation -->
 
             {{ AddToBasket.printTwigComponent( item.data ) }}
 
