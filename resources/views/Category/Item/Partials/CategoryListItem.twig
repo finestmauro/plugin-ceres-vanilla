@@ -129,9 +129,7 @@
             </div>
 
             <!-- Variation -->
-            <div class="row m-b-1" v-if="variations.length > 0">
-                <variation-select template="#vue-variation-select" :attributes="attributeNameMap" :variation-units="variationUnits" :variations="variations" :preselect="currentVariation.variation.id" :unitPreselect="currentVariation.variation.unitCombinationId" @is-valid-change="isVariationSelected = $event"></variation-select>
-            </div>
+            <span id="variations">{{ variations }}</span>
             <!-- /Variation -->
 
             {{ AddToBasket.printTwigComponent( item.data ) }}
