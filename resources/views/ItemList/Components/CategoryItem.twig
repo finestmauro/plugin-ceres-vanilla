@@ -20,9 +20,6 @@
 <script type="x/template" id="vue-category-item">
     <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
         <div class="thumb-inner">
-
-            {{ AddToBasket.printVueComponent( "itemData", true ) }}
-
             <div class="thumb-background"></div>
 
             <div class="thumb-image">
@@ -59,8 +56,7 @@
             <slot name="item-details">
                 <div class="thumb-content">
                     <a :href="itemData | itemURL" class="thumb-title small">
-                        ${ itemData | itemName } TEST
-                        ${ itemData.variation.itemId } TEST
+                        ${ itemData | itemName }
                     </a>
                     <div class="thumb-meta">
                         <div class="prices">
@@ -84,8 +80,6 @@
                             <span v-if="itemData.variation.mayShowUnitPrice">| ${ itemData.prices.default.basePrice }</span>
                         </div>
                     </div>
-
-                    {{ AddToBasket.printVueComponent( "itemData" ) }}
 
                     <span class="vat small text-muted">
                         * <span v-if="showNetPrices">{{ trans("Ceres::Template.itemExclVAT") }}</span>

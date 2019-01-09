@@ -6,8 +6,6 @@
 
 {% set image = item.data.images.all | first %}
 {% set itemUrl =  item.data | itemURL %}
-{% set itemId = item.data.item.id %}
-{% set variations = services.Item.getVariationIds(itemId) %}
 
 {% if enableCarousel is not defined %}
     {% set enableCarousel = ceresConfig.item.enableImageCarousel %}
@@ -15,8 +13,6 @@
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
     <div class="thumb-inner">
-        {{ AddToBasket.printTwigComponent( item.data, true ) }}
-
         <div class="thumb-background"></div>
 
         <div class="thumb-image">
@@ -94,8 +90,7 @@
         <!-- ITEM DETAILS -->
         <div class="thumb-content">
             <a href="{{ itemUrl }}" class="thumb-title small">
-                {{ ItemName.get(item.data | itemName, item.data.variation.bundleType) }} TEST
-                {{ item.data.item.id }} TEST
+                {{ ItemName.get(item.data | itemName, item.data.variation.bundleType) }}
             </a>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
@@ -128,8 +123,6 @@
                 {% endif %}
 
             </div>
-
-            {{ AddToBasket.printTwigComponent( item.data ) }}
 
             <span class="vat-porto-info small text-muted">
                 * {% if services.customer.showNetPrices() %}{{ trans("Ceres::Template.itemExclVAT") }}{% else %}{{ trans("Ceres::Template.itemInclVAT") }}{% endif %} {{ trans("Ceres::Template.itemExclusive") }}
