@@ -5,8 +5,6 @@
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
 
 {% set lang = services.sessionStorage.getLang() %}
-{% set itemId = item.id %}
-{% set variations = services.Item.getVariationIds(itemId) %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
 
 {% if enableCarousel is not defined %}
