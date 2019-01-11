@@ -5,6 +5,8 @@
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
 
 {% set lang = services.sessionStorage.getLang() %}
+{% set itemId = item.id %}
+{% set variations = services.Item.getVariationIds(itemId) %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
 
 {% if enableCarousel is not defined %}
@@ -54,7 +56,7 @@
             <slot name="item-details">
                 <div class="thumb-content">
                     <a :href="itemData | itemURL" class="thumb-title small">
-                        ${ itemData | itemName }
+                        ${ itemData | itemName } - ${ itemData.item.id }
                     </a>
                     <div class="thumb-meta">
                         <div class="prices">
