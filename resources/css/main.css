@@ -375,6 +375,10 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     z-index: 2;
 }
 
+#our-service ul {
+    list-style: none;
+}
+
 @media (min-width: 544px) {
 
     .parallax-img-container[style^='background-image'].category-teaser {
