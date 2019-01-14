@@ -65,14 +65,6 @@ class CeresVanillaServiceProvider extends ServiceProvider
             return false;
         }, self::PRIORITY);
 
-        $dispatcher->listen('IO.Component.Import', function (ComponentContainer $container)
-        {
-            if( $container->getOriginComponentTemplate() == 'Ceres::ItemList.Components.CategoryItem')
-            {
-                $container->setNewComponentTemplate('CeresVanilla::ItemList.Components.CategoryItem');
-            }
-        }, 0);
-
         // Override homepage
         if (in_array("homepage", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
