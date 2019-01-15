@@ -392,6 +392,11 @@ jQuery(document).ready(function () {
 		jQuery("#single-carousel").show();
         jQuery(".artikel-video").removeClass('active');
 	});
+
+	jQuery('.itemDataId').each(function() {
+        var itemId = jQuery(this).html();
+        console.log(itemId);
+	});
     {% endif %}
 });
 
