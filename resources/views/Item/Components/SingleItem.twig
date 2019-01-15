@@ -344,11 +344,9 @@
 
         	<div class="row text-center m-b-3">
                 <div class="col-xs-12">
-        			{% include "Ceres::Containers.Partials.ItemLists.ItemList" with { itemListNo: 2 } %}
+                    {% include "Ceres::Containers.Partials.ItemLists.ItemList" with { itemListNo: 1 } %}
                 </div>
         	</div>
-
-            {% include "Ceres::Containers.Partials.ItemLists.ItemList" with { itemListNo: 1 } %}
 
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
