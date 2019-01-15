@@ -410,12 +410,30 @@ jQuery(document).ready(function () {
     			 	$article.find(".itemMobileBasket").remove();
     			} else {
                     var $itemSelect = $article.find(".itemSelect");
+                    var $itemBasket = $article.find(".itemBasket");
     				jQuery('<div class="form-group m-b-0 m-t-1"><select class="form-control" id="selectItem-'+itemId+'">'+data+'</select></div>').appendTo($itemSelect);
     			 	$itemSelect.removeClass('hidden');
+    			 	$itemBasket.removeClass('hidden');
     			}
     		}
     	});
 	});
+
+    $(document).on('click', '.itemBasket', function() {
+        var $article = jQuery(this).parents('article');
+        var itemSelectValue = $article.find(".itemSelect").val();
+
+    	var url = "https://www.finest-trachten.info/rest/io/basket/items";
+
+    	jQuery.ajax({
+    		type: "POST",
+    		url: url,
+    		data: {variationId: itemSelectValue, quantity: 1},
+    		success: function(data) {
+
+    		}
+    	});
+    });
     {% endif %}
 });
 
