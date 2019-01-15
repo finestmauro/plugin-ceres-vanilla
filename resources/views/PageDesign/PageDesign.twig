@@ -396,7 +396,6 @@ jQuery(document).ready(function () {
 	jQuery('.itemDataId').each(function() {
         var itemId = jQuery(this).html();
         var $article = jQuery(this).parents('article');
-        console.log($article);
 
     	var dataString = 'id='+itemId;
     	var url = "https://www.finest-trachten.info/shop/variations.php";
@@ -409,11 +408,10 @@ jQuery(document).ready(function () {
     			if(data == 'NULL') {
     			 	$article.find(".itemBasket").remove();
     			 	$article.find(".itemMobileBasket").remove();
-                    console.log($article.find(".itemMobileBasket"));
     			} else {
                     var $itemSelect = $article.find(".itemSelect");
-                    console.log($article.find(".itemSelect"));
     				jQuery('<div class="form-group"><select class="form-control" id="selectItem-'+itemId+'">'+data+'</select></div>').appendTo($itemSelect);
+    			 	$itemSelect.removeClass('hidden');
     			}
     		}
     	});
