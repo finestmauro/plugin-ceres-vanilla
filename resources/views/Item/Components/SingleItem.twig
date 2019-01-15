@@ -325,6 +325,20 @@
             	</div>
             </div>
 
+        	<div id="outfit"  class="row text-center m-b-1">
+                <div class="col-xs-12">
+                    <slot name="IsOutfit"></slot>
+                </div>
+        	</div>
+
+        	<div class="row text-center m-b-3">
+                <div class="col-xs-12">
+        			{% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 2 } %}
+                </div>
+        	</div>
+
+            {% include "CeresVanilla::Containers.Partials.ItemLists.ItemList" with { itemListNo: 1 } %}
+
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
         </div>
