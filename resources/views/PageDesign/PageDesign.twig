@@ -420,7 +420,7 @@ jQuery(document).ready(function () {
 
     $(document).on('click', '.itemBasket', function() {
         var $article = jQuery(this).parents('article');
-        var itemSelectValue = $article.find(".itemSelect").val();
+        var itemSelectValue = $article.find(".itemSelect").find("select").val();
 
     	var url = "https://www.finest-trachten.de/rest/io/basket/items";
 
