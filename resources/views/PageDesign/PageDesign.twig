@@ -427,7 +427,7 @@ jQuery(document).ready(function () {
     	jQuery.ajax({
     		type: "POST",
     		url: url,
-    		data: {variationId: itemSelectValue, quantity: 1},
+    		data: {variationId: itemSelectValue, quantity: 1, template: 'Ceres::Basket.Basket', templateEvent: 'tpl.item'},
     		success: function(data) {
 
     		}
