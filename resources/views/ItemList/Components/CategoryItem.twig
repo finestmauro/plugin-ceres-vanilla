@@ -18,8 +18,9 @@
 <script type="x/template" id="vue-category-item">
     <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
         <div class="thumb-inner">
-            {{ AddToBasket.printVueComponent( "itemData", true ) }}
+
             <div class="thumb-background"></div>
+
             <div class="thumb-image">
                 <div class="square-container">
                     <div class="square-inner main-image">
@@ -38,6 +39,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- STORE SPECIALS -->
             <slot name="store-special">
                 <item-store-special v-if="storeSpecial || itemData.variation.bundleType == 'bundle'"
@@ -48,13 +50,15 @@
                                     :bundle-type="itemData.variation.bundleType"></item-store-special>
             </slot>
             <!-- ./STORE SPECIALS -->
+
             <!-- ITEM DETAILS -->
             <slot name="item-details">
                 <div class="thumb-content">
                     <a :href="itemData | itemURL" class="thumb-title small">
                         ${ itemData | itemName }
                     </a>
-                    <div class="thumb-meta">
+
+                    <div class="thumb-meta m-t-1">
                         <div class="prices">
                             <div v-if="itemData.prices.rrp && itemData.prices.rrp.price.value > 0 && itemData.prices.rrp.price.value > itemData.prices.default.unitPrice.value" class="price-view-port">
                                 <del class="crossprice" v-if="itemData.prices.specialOffer">
@@ -64,17 +68,30 @@
                                     ${ itemData.prices.rrp.price.formatted }
                                 </del>
                             </div>
+
                             <div class="price">
                                 ${ itemData.prices.default.unitPrice.formatted | specialOffer(itemData.prices, "unitPrice", "formatted") } *
                             </div>
                         </div>
+
                         <div class="category-unit-price" v-if="!(itemData.unit.unitOfMeasurement === 'C62' && itemData.unit.content === 1)">
                             <span>${ itemData.unit.content }</span>
                             <span>${ itemData.unit.names.name }</span>
                             <span v-if="itemData.variation.mayShowUnitPrice">| ${ itemData.prices.default.basePrice }</span>
                         </div>
                     </div>
-                    {{ AddToBasket.printVueComponent( "itemData" ) }}
+
+                    <div class="itemDataId hidden">${ itemData.item.id }</div>
+
+                    <div class="itemSelect hidden"></div>
+
+                    <div class="itemBasket hidden">
+						<button type="button" class="btn btn-outline-primary w-100">
+							<i aria-hidden="true" class="fa fa-cart-plus fa-lg m-r-1"></i>
+							<span>In den Warenkorb</span>
+						</button>
+					</div>
+
                     <span class="vat small text-muted">
                         * <span v-if="showNetPrices">{{ trans("Ceres::Template.itemExclVAT") }}</span>
                         <span v-else>{{ trans("Ceres::Template.itemInclVAT") }}</span>
