@@ -392,6 +392,47 @@ jQuery(document).ready(function () {
 		jQuery("#single-carousel").show();
         jQuery(".artikel-video").removeClass('active');
 	});
+
+	jQuery('.itemDataId').each(function() {
+        var itemId = jQuery(this).html();
+        var $article = jQuery(this).parents('article');
+
+    	var dataString = 'id='+itemId;
+    	var url = "https://www.finest-trachten.info/shop/variations.php";
+
+    	jQuery.ajax({
+    		type: "POST",
+    		url: url,
+    		data: dataString,
+    		success: function(data) {
+    			if(data == 'NULL') {
+    			 	$article.find(".itemBasket").remove();
+    			} else {
+                    var $itemSelect = $article.find(".itemSelect");
+                    var $itemBasket = $article.find(".itemBasket");
+    				jQuery('<div class="form-group m-t-5 m-b-1"><select class="form-control" id="selectItem-'+itemId+'">'+data+'</select></div>').appendTo($itemSelect);
+    			 	$itemSelect.removeClass('hidden');
+    			 	$itemBasket.removeClass('hidden');
+    			}
+    		}
+    	});
+	});
+
+    $(document).on('click', '.itemBasket', function() {
+        var $article = jQuery(this).parents('article');
+        var itemSelectValue = $article.find(".itemSelect").find("select").val();
+
+    	var url = "https://www.finest-trachten.de/rest/io/basket/items";
+
+    	jQuery.ajax({
+    		type: "POST",
+    		url: url,
+    		data: {variationId: itemSelectValue, quantity: 1},
+    		success: function(data) {
+
+    		}
+    	});
+    });
     {% endif %}
 });
 
