@@ -73,14 +73,14 @@
                             </div>
                         </div>
 
-                    	<div class="itemDataId d-none">${ itemData.item.id }</div>
-
                         <div class="category-unit-price" v-if="!(itemData.unit.unitOfMeasurement === 'C62' && itemData.unit.content === 1)">
                             <span>${ itemData.unit.content }</span>
                             <span>${ itemData.unit.names.name }</span>
                             <span v-if="itemData.variation.mayShowUnitPrice">| ${ itemData.prices.default.basePrice }</span>
                         </div>
                     </div>
+
+                    <div class="itemDataId hidden">${ itemData.item.id }</div>
 
                     {{ AddToBasket.printVueComponent( "itemData" ) }}
 
