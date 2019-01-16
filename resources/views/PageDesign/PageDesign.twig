@@ -406,7 +406,7 @@ jQuery(document).ready(function () {
     		data: dataString,
     		success: function(data) {
     			if(data == 'NULL') {
-    			 	$article.remove();
+    			 	$article.parent(".owl-item").remove();
     			} else {
                     var $itemSelect = $article.find(".itemSelect");
                     var $itemBasket = $article.find(".itemBasket");
