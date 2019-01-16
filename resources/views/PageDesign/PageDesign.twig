@@ -429,7 +429,15 @@ jQuery(document).ready(function () {
     		url: url,
     		data: {variationId: itemSelectValue, quantity: 1, template: 'Ceres::Basket.Basket', templateEvent: 'tpl.item'},
     		success: function(data) {
-                jQuery('a.toggle-basket-preview').trigger('click');
+                const vueApp = document.querySelector("#vue-app");
+
+                if (vueApp)
+                {
+                    vueApp.classList.toggle("open-right" || "open-hover");
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                
                 console.log('toggle-basket-preview');
             }
     	});
