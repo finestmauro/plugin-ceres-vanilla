@@ -406,7 +406,7 @@ jQuery(document).ready(function () {
     		data: dataString,
     		success: function(data) {
     			if(data == 'NULL') {
-    			 	$article.find(".itemBasket").remove();
+    			 	$article.remove();
     			} else {
                     var $itemSelect = $article.find(".itemSelect");
                     var $itemBasket = $article.find(".itemBasket");
@@ -437,7 +437,7 @@ jQuery(document).ready(function () {
                     event.preventDefault();
                     event.stopPropagation();
                 }
-                
+
                 console.log('toggle-basket-preview');
             }
     	});
