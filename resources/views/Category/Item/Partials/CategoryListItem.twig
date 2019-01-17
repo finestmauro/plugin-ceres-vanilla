@@ -69,7 +69,7 @@
 
                 {% endif %}
 
-                {% if date(item.data.variation.releasedAt) > date('-30days') %}
+                {% if date(item.data.variation.releasedAt) > date('-300days') %}
                     {% set storeSpecial = 'NEUTEST' %}
                 {% endif %}
 
