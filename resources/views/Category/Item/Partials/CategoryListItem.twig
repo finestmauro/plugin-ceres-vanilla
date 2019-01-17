@@ -69,6 +69,10 @@
 
                 {% endif %}
 
+                {% if date(item.data.variation.releasedAt) > date('-30days') %}
+                    {% set storeSpecial = 'NEUTEST' %}
+                {% endif %}
+
                 {% if item.data.variation.bundleType == "bundle" %}
 
                     <span class="tag bg-info">
@@ -91,6 +95,7 @@
         <div class="thumb-content">
             <a href="{{ itemUrl }}" class="thumb-title small">
                 {{ ItemName.get(item.data | itemName, item.data.variation.bundleType) }}
+                {{ item.data.variation.releasedAt }}
             </a>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
