@@ -396,9 +396,14 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
+    font-size: 3rem;
     font-weight: 900;
     content: "\f00d";
+    position: absolute;
+    right: 15px;
+    top: -2rem;
+    color: #fff;
 }
 
 .lb-container .lb-nav a.lb-prev::after {
@@ -407,9 +412,13 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
+    font-size: 3rem;
     font-weight: 900;
     content: "\f053";
+    position: absolute;
+    left: 15px;
+    top: 50%;
 }
 
 .lb-container .lb-nav a.lb-next::after {
@@ -418,9 +427,13 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
+    font-size: 3rem;
     font-weight: 900;
     content: "\f054";
+    position: absolute;
+    right: 15px;
+    top: 50%;
 }
 
 @media (min-width: 544px) {
