@@ -619,5 +619,18 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
         border: 1px solid #efefef;
+        columns: unset;
+        text-align: left;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        width: 24%;
+    }
+
+    nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li.level1 {
+        padding: .5em 1em 1em;
     }
 }
