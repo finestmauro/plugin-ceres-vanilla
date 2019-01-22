@@ -386,6 +386,43 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     z-index: auto;
 }
 
+.lb-container {
+    position: relative;
+}
+
+.lb-container::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+}
+
+.lb-container .lb-nav a.lb-prev::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f053";
+}
+
+.lb-container .lb-nav a.lb-next::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+}
+
 @media (min-width: 544px) {
 
     .cmp-product-thumb .thumb-title {
