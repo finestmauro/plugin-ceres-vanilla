@@ -404,6 +404,8 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
     right: 15px;
     top: -2rem;
     color: #fff;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 .lb-container .lb-nav a.lb-prev::after {
