@@ -69,10 +69,6 @@
 
                 {% endif %}
 
-                {% if date(item.data.variation.releasedAt) > date('-300days') %}
-                    {% set storeSpecial = 'NEUTEST' %}
-                {% endif %}
-
                 {% if item.data.variation.bundleType == "bundle" %}
 
                     <span class="tag bg-info">
