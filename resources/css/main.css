@@ -627,7 +627,7 @@ body, body > #vue-app, body > #vue-error, .navbar, .page-content {
         display: inline-block;
         float: none;
         vertical-align: top;
-        width: 24%;
+        width: calc( 20% - 5px );
     }
 
     nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li.level1 {
