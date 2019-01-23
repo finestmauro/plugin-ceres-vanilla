@@ -373,7 +373,7 @@ jQuery(document).ready(function () {
     			} else {
                     jQuery("#youtube iframe").remove();
     				jQuery('<iframe width="585" height="360" frameborder="0" class="w-100" allowfullscreen></iframe>')
-    					    .attr("src", "https://www.youtube.com/embed/" + $.trim(data) + "?rel=0")
+    					    .attr("src", "https://www.youtube-nocookie.com/embed/" + $.trim(data) + "?rel=0")
     					    .appendTo("#youtube");
     			}
     		}
