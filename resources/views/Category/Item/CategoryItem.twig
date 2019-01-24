@@ -137,8 +137,8 @@
 
         <div id="category-description-container" class="m-b-2 row">
             <div class="col-xs-12">
-                    {% if category.details[0].category.details[0].description2 %}{<div class="category-description m-b-1" data-category-description="2">{{ category.details[0].description2 | raw }}</div>{% endif %}
-                    {% if category.details[0].category.details[0].description %}{<div class="category-description m-b-1" data-category-description="1">{{ category.details[0].description | raw }}</div>{% endif %}
+                    <div class="category-description m-b-1" data-category-description="2">{{ category.details[0].description2 | raw }}</div>
+                    <div class="category-description m-b-1" data-category-description="1">{{ category.details[0].description | raw }}</div>
             </div>
         </div>
     </div>
