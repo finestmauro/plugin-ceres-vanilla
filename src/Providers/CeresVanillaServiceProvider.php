@@ -153,6 +153,17 @@ class CeresVanillaServiceProvider extends ServiceProvider
             }, self::PRIORITY);
         }
 
+        // Override contact page
+        if (in_array("contact", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.contact', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::Customer.Contact');
+                return false;
+            }, self::PRIORITY);
+        }
+
         // Override single item page
         if (in_array("item", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
