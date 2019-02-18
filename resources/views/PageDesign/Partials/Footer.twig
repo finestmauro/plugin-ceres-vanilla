@@ -17,103 +17,8 @@
 {% endif %}
 <footer class="p-y-3 text-center">
 	<div class="container-max">
-	    {% if not services.template.isCheckout() %}
-		<div class="row">
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Finest Trachten</div>
-				<ul class="list-unstyled">
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Impressum" href="{{ services.category.getURLById(2) }}">Impressum</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Über Uns" href="{{ services.category.getURLById(8) }}">Über Uns</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Hilfe" href="{{ services.category.getURLById(402) }}">Hilfe</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Sitemap" href="/sitemap.xml">Sitemap</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Service</div>
-				<ul class="list-unstyled">
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="AGB" href="{{ services.category.getURLById(11) }}">AGB</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Widerrufsrecht" href="{{ services.category.getURLById(10) }}">Widerrufsrecht</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Datenschutz" href="{{ services.category.getURLById(12) }}">Datenschutz</a></li>
-                	<li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Newsletter-Abmeldung" onclick="window.open('/kontakt/newsletter-abmelden/','newwindow','width=760,height=800'); return false;" href="/kontakt/newsletter-abmelden/">Newsletter-Abmeldung</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Bestellen</div>
-				<ul class="list-unstyled">
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Kontakt" href="{{ urls.contact }}">Kontakt</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Versand" href="{{ services.category.getURLById(403) }}">Versand</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Zahlarten" href="{{ services.category.getURLById(38) }}">Zahlarten</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Retouren" href="{{ services.category.getURLById(407) }}">Retouren</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Finest Apps</div>
-				<a class="d-inline-block w-50 mx-auto m-b-5" title="Lade die Finest Trachten iOS App bei iTunes" href="https://itunes.apple.com/de/app/finest-trachten/id710530200?mt=8" target="_blank">
-					<item-lazy-img ref="itemLazyImage" class="w-100" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/itunes.jpg" alt="Lade die Finest Trachten iOS App bei iTunes" title="Lade die Finest Trachten iOS App bei iTunes"></item-lazy-img>
-				</a>
-				<a class="d-inline-block w-50 mx-auto m-b-5" title="Lade die Finest Trachten Android App bei Google Play" href="https://play.google.com/store/apps/details?id=com.shopgate.android.app11080" target="_blank">
-					<item-lazy-img ref="itemLazyImage" class="w-100" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/playstore.jpg" alt="Lade die Finest Trachten Android App bei Google Play" title="Lade die Finest Trachten Android App bei Google Play"></item-lazy-img>
-				</a>
-			</div>
-        </div>
-        <div class="row">
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Auf einen Blick</div>
-				<ul class="list-unstyled">
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="alle Trachtenhersteller" href="{{ services.category.getURLById(49) }}">Hersteller</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Größentabelle" href="{{ services.category.getURLById(406) }}">Größentabelle</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Trachtenblog" href="/blog/">Trachtenblog</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Trachtenlexikon" href="{{ services.category.getURLById(81) }}">Trachtenlexikon</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Unser Trachten-Outfit Planner für Ihr Traum-Outfit" href="/trachten-outfits/">Trachten-Outfits</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Artikelgalerie" href="https://gallery.finest-trachten.de">Artikelgalerie</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Schnell gefunden für Damen</div>
-				<ul class="list-unstyled">
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-farbe/">Dirndl nach FARBE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-groesse/">Dirndl nach GRÖßE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-laenge/">Dirndl nach LÄNGE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndlbluse-nach-farbe/">Bluse nach FARBE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndlbluse-nach-groesse/">Bluse nach GRÖßE</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Schnell gefunden für Herren</div>
-				<ul class="list-unstyled">
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/lederhose-nach-groesse/">Lederhose nach GRÖßE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/lederhose-nach-laenge/">Lederhose nach LÄNGE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/trachtenhemd-nach-farbe/">Hemd nach FARBE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/trachtenhemd-nach-groesse/">Hemd nach GRÖßE</a></li>
-					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/weste-nach-groesse/">Weste nach GRÖßE</a></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
-				<div class="h5 text-uppercase">Social Media</div>
-				<ul class="list-unstyled">
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Facebook" href="https://www.facebook.com/Finest-trachtende-199748796742010/" target="_blank"><i class="fa fa-facebook-square"></i>  Facebook</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Youtube" href="https://www.youtube.com/channel/UCqvrncrDtnr78KwnIWtNw8w/videos?view=0&shelf_id=0&sort=dd" target="_blank"><i class="fa fa-youtube"></i>  Youtube</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Pinterest" href="https://www.pinterest.de/finesttrachtend/" target="_blank"><i class="fa fa-pinterest"></i>  Pinterest</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Instagram" href="https://www.instagram.com/finesttrachten/" target="_blank"><i class="fa fa-instagram"></i>  Instagram</a></li>
-                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Google Plus" href="https://plus.google.com/+Finest-trachtenDe" target="_blank"><i class="fa fa-google-plus"></i>  Google +</a></li>
-				</ul>
-			</div>
-        </div>
-		{% endif %}
-        <div class="row">
-			<div class="col-xs-12 col-md-6 m-b-3">
-				<div class="h5 text-uppercase">Unsere Zahlarten</div>
-				<item-lazy-img ref="itemLazyImage" class="w-66" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/payment-methods.jpg" alt="Unsere Zahlarten" title="Unsere Zahlarten"></item-lazy-img>
-			</div>
-			<div class="col-xs-12 col-md-6 m-b-3">
-				<div class="h5 text-uppercase">Datenschutz nach DSGVO</div>
-				<a title="Datenschutz" href="{{ services.category.getURLById(12) }}">
-					<item-lazy-img ref="itemLazyImage" class="w-20" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/datenschutz.jpg" alt="Datenschutz nach DSGVO" title="Datenschutz nach DSGVO"></item-lazy-img>
-				</a>
-			</div>
-		</div>
 		{% if services.template.isHome() %}
-        <div class="row">
+		<div class="row">
 			<div class="col-xs-12">
 				<div class="category-description m-b-3 text-justify">
 					<h1>Trachtenmode im Finest Trachten Online Shop</h1>
@@ -258,10 +163,105 @@
 					<p>Entdecken Sie jetzt <strong>Herrentrachten und Damentrachten der aktuellen Saison</strong> und Sie können das Oktoberfest stilsicher feiern. Trachtenkleidung ist ein wichtiger Bestandteil der <strong>Volksfeste Süddeutschlands</strong> und gehört zu einem besonderen Erlebnis dazu.</p>
 
 					<p>Die Trachtenkleidung aus unserem Sortiment ist <strong>abwechslungsreich und qualitativ hochwertig</strong>. Falls Sie Fragen haben, beraten wir Sie gerne rund um alle Themen von Dirndl bis Lederhosen. Bestellen Sie jetzt Ihre <strong>Trachtenmode im Finest Trachten Online Shop</strong>!</p>
-	        	</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	    {% if not services.template.isCheckout() %}
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Finest Trachten</div>
+				<ul class="list-unstyled">
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Impressum" href="{{ services.category.getURLById(2) }}">Impressum</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Über Uns" href="{{ services.category.getURLById(8) }}">Über Uns</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Hilfe" href="{{ services.category.getURLById(402) }}">Hilfe</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Sitemap" href="/sitemap.xml">Sitemap</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Service</div>
+				<ul class="list-unstyled">
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="AGB" href="{{ services.category.getURLById(11) }}">AGB</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Widerrufsrecht" href="{{ services.category.getURLById(10) }}">Widerrufsrecht</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Datenschutz" href="{{ services.category.getURLById(12) }}">Datenschutz</a></li>
+                	<li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Newsletter-Abmeldung" onclick="window.open('/kontakt/newsletter-abmelden/','newwindow','width=760,height=800'); return false;" href="/kontakt/newsletter-abmelden/">Newsletter-Abmeldung</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Bestellen</div>
+				<ul class="list-unstyled">
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Kontakt" href="{{ urls.contact }}">Kontakt</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Versand" href="{{ services.category.getURLById(403) }}">Versand</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Zahlarten" href="{{ services.category.getURLById(38) }}">Zahlarten</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Retouren" href="{{ services.category.getURLById(407) }}">Retouren</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Finest Apps</div>
+				<a class="d-inline-block w-50 mx-auto m-b-5" title="Lade die Finest Trachten iOS App bei iTunes" href="https://itunes.apple.com/de/app/finest-trachten/id710530200?mt=8" target="_blank">
+					<item-lazy-img ref="itemLazyImage" class="w-100" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/itunes.jpg" alt="Lade die Finest Trachten iOS App bei iTunes" title="Lade die Finest Trachten iOS App bei iTunes"></item-lazy-img>
+				</a>
+				<a class="d-inline-block w-50 mx-auto m-b-5" title="Lade die Finest Trachten Android App bei Google Play" href="https://play.google.com/store/apps/details?id=com.shopgate.android.app11080" target="_blank">
+					<item-lazy-img ref="itemLazyImage" class="w-100" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/playstore.jpg" alt="Lade die Finest Trachten Android App bei Google Play" title="Lade die Finest Trachten Android App bei Google Play"></item-lazy-img>
+				</a>
+			</div>
+        </div>
+        <div class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Auf einen Blick</div>
+				<ul class="list-unstyled">
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="alle Trachtenhersteller" href="{{ services.category.getURLById(49) }}">Hersteller</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Größentabelle" href="{{ services.category.getURLById(406) }}">Größentabelle</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Trachtenblog" href="/blog/">Trachtenblog</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Trachtenlexikon" href="{{ services.category.getURLById(81) }}">Trachtenlexikon</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Unser Trachten-Outfit Planner für Ihr Traum-Outfit" href="/trachten-outfits/">Trachten-Outfits</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Artikelgalerie" href="https://gallery.finest-trachten.de">Artikelgalerie</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Schnell gefunden für Damen</div>
+				<ul class="list-unstyled">
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-farbe/">Dirndl nach FARBE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-groesse/">Dirndl nach GRÖßE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndl-nach-laenge/">Dirndl nach LÄNGE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndlbluse-nach-farbe/">Bluse nach FARBE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-damen/dirndlbluse-nach-groesse/">Bluse nach GRÖßE</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Schnell gefunden für Herren</div>
+				<ul class="list-unstyled">
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/lederhose-nach-groesse/">Lederhose nach GRÖßE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/lederhose-nach-laenge/">Lederhose nach LÄNGE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/trachtenhemd-nach-farbe/">Hemd nach FARBE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/trachtenhemd-nach-groesse/">Hemd nach GRÖßE</a></li>
+					<li class="m-b-5"><a class="text-muted text-uppercase text-small" href="/schnell-gefunden-herren/weste-nach-groesse/">Weste nach GRÖßE</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3 m-b-3">
+				<div class="h5 text-uppercase">Social Media</div>
+				<ul class="list-unstyled">
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Facebook" href="https://www.facebook.com/Finest-trachtende-199748796742010/" target="_blank"><i class="fa fa-facebook-square"></i>  Facebook</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Youtube" href="https://www.youtube.com/channel/UCqvrncrDtnr78KwnIWtNw8w/videos?view=0&shelf_id=0&sort=dd" target="_blank"><i class="fa fa-youtube"></i>  Youtube</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Pinterest" href="https://www.pinterest.de/finesttrachtend/" target="_blank"><i class="fa fa-pinterest"></i>  Pinterest</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Instagram" href="https://www.instagram.com/finesttrachten/" target="_blank"><i class="fa fa-instagram"></i>  Instagram</a></li>
+                    <li class="m-b-5"><a class="text-muted text-uppercase text-small" title="Google Plus" href="https://plus.google.com/+Finest-trachtenDe" target="_blank"><i class="fa fa-google-plus"></i>  Google +</a></li>
+				</ul>
 			</div>
         </div>
 		{% endif %}
+        <div class="row">
+			<div class="col-xs-12 col-md-6 m-b-3">
+				<div class="h5 text-uppercase">Unsere Zahlarten</div>
+				<item-lazy-img ref="itemLazyImage" class="w-66" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/payment-methods.jpg" alt="Unsere Zahlarten" title="Unsere Zahlarten"></item-lazy-img>
+			</div>
+			<div class="col-xs-12 col-md-6 m-b-3">
+				<div class="h5 text-uppercase">Datenschutz nach DSGVO</div>
+				<a title="Datenschutz" href="{{ services.category.getURLById(12) }}">
+					<item-lazy-img ref="itemLazyImage" class="w-20" template="#vue-item-lazy-img" image-url="https://www.finest-trachten.info/images/datenschutz.jpg" alt="Datenschutz nach DSGVO" title="Datenschutz nach DSGVO"></item-lazy-img>
+				</a>
+			</div>
+		</div>
 	</div>
 </footer>
 
