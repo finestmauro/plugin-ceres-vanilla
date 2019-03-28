@@ -1,1 +1,71 @@
-<!-- Insert markup for header here -->
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{{ component( "Ceres::Customer.Components.UserLoginHandler" ) }}
+{{ component( "Ceres::PageDesign.Components.ShippingCountrySelect" ) }}
+{{ component( "Ceres::PageDesign.Components.MobileNavigation" ) }}
+{{ component( "Ceres::ItemList.Components.ItemSearch" ) }}
+{{ component( "Ceres::WishList.Components.WishListCount" ) }}
+{{ component( "Ceres::Basket.Components.BasketPreviewHover" ) }}
+
+{% set lang = services.sessionStorage.getLang() %}
+{% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
+{% set activeCurrencies = config("Ceres.currency.available_currencies") | split(', ') %}
+{% set enableCurrencySelect = config("Ceres.currency.enable_selection") == "true" and activeCurrencies | length > 0 %}
+{% set currencyFormat = config("Ceres.currency.format") %}
+{% set currencyFormatSelect = config("Ceres.currency.format_selection") %}
+
+<style type="text/css">
+	.wrapper-white { background:#fff; }
+	header { padding: 15px 0 0; }
+	.header-left { display:none;}
+	.navbar-search { background:#fff;padding:15px 8px;position:absolute;right:8px;transition:all .2s ease;width:50%;z-index:10000; }
+	.navbar-search.focus { padding:15px 74px;width:calc(100% - 16px); }
+	.navbar-search .form-control { border:1px solid #eee;border-radius:0; }
+	.navbar-search .form-control:focus { border:1px solid #666;box-shadow:none; }
+	.navbar-search .search-submit { cursor:pointer;line-height:18px;padding:8px 12px;position:absolute;right:0;top:0; }
+	.navbar-search .search-close { display:none;position:absolute;right:8px;top:8px; }
+	.navbar-search.focus .search-close { cursor:pointer;display:block;position:absolute;right:16px;top:24px; }
+	.navbar-basket { left:60px;opacity:0;padding:12px 0;position: absolute;top:10px;transition:all .2s ease; }
+	.fixed .navbar-basket { opacity:1; }
+	@media (min-width:992px){
+		.navbar-search { text-align:center;width:25%;z-index:100001; }
+		.header { text-align:center; }
+		.header-left { display:block;}
+		.header-link div, .header-right .account-link, .navbar-basket { display:none; }
+	}
+</style>
+
+<div class="wrapper-grey d-none d-lg-block">
+    <div class="container">
+        <div class="row text-sm py-2">
+            <div class="col-xs-12 col-md-4 text-left">
+                <i class="fa fa-check-circle"></i> Kostenloser Versand und Rückversand
+            </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <i class="fa fa-check-circle"></i> 30 Tage Rückgaberecht
+            </div>
+            <div class="col-xs-12 col-md-4 text-right">
+                <i class="fa fa-check-circle"></i> 5% Rabatt bei Newsletter-Anmeldung
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="container relative">
+	<div class="header w-100">
+		<a href="/" class="logo">
+			<img src="https://www.finest-trachten.info/images/finest-trachten-logo-sm.jpg" class="w-100 h-100">
+		</a>
+	</div>
+	<div class="header-left">
+		<div class="header-link account-link pointer" style="padding:0 12px;"><a href="{% Link_MyAccount() %}"><i class="far fa-user"></i><span class="ml-2">MEIN KONTO</span></a></div>
+	</div>
+	<div class="header-right text-center">
+		<div class="header-link account-link pointer">
+			<a href="{% Link_MyAccount() %}">
+				<i class="far fa-user"></i>
+				<div style="font-size:8px">MEIN KONTO</div>
+			</a>
+		</div>
+	</div>
+</header>
